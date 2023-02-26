@@ -7,11 +7,12 @@
     <title>Marcho</title>
     <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
     <link rel="stylesheet" href="./css/style.mini.css">
+    <script defer src="./js/main.js"></script>
     <script defer src="./js/shop.js"></script>
 </head>
 
 <body>
-        
+
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -24,7 +25,7 @@
                     </button>
                     <ul class="menu__list">
                         <li class="menu__list-item">
-                            <a class="menu__list-link menu__list-link--active" href="index.html">Главная</a>
+                            <a class="menu__list-link" href="index.html">Главная</a>
                         </li>
                         <li class="menu__list-item">
                             <a class="menu__list-link" href="shop.html">Магазин</a>
@@ -54,7 +55,7 @@
         </div>
     </header>
 
-        <main id="swup" class="main transition-fade">
+    <main id="swup" class="main transition-fade">
 
         <section class="top">
             <div class="top__container" style="background-image: url('images/top-bg.jpg');">
@@ -82,14 +83,21 @@
             <div class="container">
                 <div class="shop__inner">
                     <button class="shop__filter-btn">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="filter" class="svg-inline--fa fa-filter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"></path></svg>
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="filter"
+                            class="svg-inline--fa fa-filter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z">
+                            </path>
+                        </svg>
                     </button>
                     <div class="shop__filters filter">
 
                         <div class="filter-search filter__item">
                             <h3 class="filter__title">Поиск</h3>
                             <form class="filter-search__form" action="#">
-                                <input class="filter-search__input" type="text" placeholder="Введите ключевое слово....">
+                                <input class="filter-search__input" type="text"
+                                    placeholder="Введите ключевое слово....">
                                 <button class="filter-search__btn" type="submit">
                                     <img src="images/icons/search-white.svg" alt="search images">
                                 </button>
@@ -99,19 +107,19 @@
                         <div class="filter__item filter-price">
                             <h3 class="filter__title">ЦЕНОВОЙ ФИЛЬТР</h3>
                             <form class="filter-price__form" action="#">
-                                
+
                                 <div class="filter-price__range">
                                     <div class="filter-price__input-wrapper">
                                         <label for="min" class="filter-price__label">от</label>
                                         <input id="min" class="filter-price__input">
                                     </div>
-    
+
                                     <div class="filter-price__input-wrapper">
                                         <label for="max" class="filter-price__label">до</label>
                                         <input id="max" class="filter-price__input">
                                     </div>
                                 </div>
-                              
+
 
                                 <label class="filter-price__label-wrap">
                                     <span>Цена:
@@ -119,7 +127,7 @@
                                         $<span class="filter-price__to"></span>
                                     </span>
                                     <button class="filter-price__btn" type="submit">ФИЛЬТР</button>
-                                </label> 
+                                </label>
                             </form>
                         </div>
 
@@ -304,22 +312,18 @@
                             <div class="shop-content__filter-buttons">
                                 <span>Вид</span>
                                 <button class="shop-content__filter-btn shop-content__filter-btn--active button-grid">
-                                    <svg 
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="15px" height="15px">
-                                        <path fill-rule="evenodd"   fill="rgb(141, 141, 141)"
-                                        d="M-0.000,3.750 L3.750,3.750 L3.750,-0.000 L-0.000,-0.000 L-0.000,3.750 ZM5.625,15.000 L9.375,15.000 L9.375,11.250 L5.625,11.250 L5.625,15.000 ZM-0.000,15.000 L3.750,15.000 L3.750,11.250 L-0.000,11.250 L-0.000,15.000 ZM-0.000,9.375 L3.750,9.375 L3.750,5.625 L-0.000,5.625 L-0.000,9.375 ZM5.625,9.375 L9.375,9.375 L9.375,5.625 L5.625,5.625 L5.625,9.375 ZM11.250,-0.000 L11.250,3.750 L15.000,3.750 L15.000,-0.000 L11.250,-0.000 ZM5.625,3.750 L9.375,3.750 L9.375,-0.000 L5.625,-0.000 L5.625,3.750 ZM11.250,9.375 L15.000,9.375 L15.000,5.625 L11.250,5.625 L11.250,9.375 ZM11.250,15.000 L15.000,15.000 L15.000,11.250 L11.250,11.250 L11.250,15.000 Z"/>
-                                        </svg>
+                                        <path fill-rule="evenodd" fill="rgb(141, 141, 141)"
+                                            d="M-0.000,3.750 L3.750,3.750 L3.750,-0.000 L-0.000,-0.000 L-0.000,3.750 ZM5.625,15.000 L9.375,15.000 L9.375,11.250 L5.625,11.250 L5.625,15.000 ZM-0.000,15.000 L3.750,15.000 L3.750,11.250 L-0.000,11.250 L-0.000,15.000 ZM-0.000,9.375 L3.750,9.375 L3.750,5.625 L-0.000,5.625 L-0.000,9.375 ZM5.625,9.375 L9.375,9.375 L9.375,5.625 L5.625,5.625 L5.625,9.375 ZM11.250,-0.000 L11.250,3.750 L15.000,3.750 L15.000,-0.000 L11.250,-0.000 ZM5.625,3.750 L9.375,3.750 L9.375,-0.000 L5.625,-0.000 L5.625,3.750 ZM11.250,9.375 L15.000,9.375 L15.000,5.625 L11.250,5.625 L11.250,9.375 ZM11.250,15.000 L15.000,15.000 L15.000,11.250 L11.250,11.250 L11.250,15.000 Z" />
+                                    </svg>
                                 </button>
                                 <button class="shop-content__filter-btn button-list">
-                                    <svg 
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="20px" height="15px">
-                                        <path fill-rule="evenodd"  fill="rgb(141, 141, 141)"
-                                        d="M5.835,14.998 L5.835,10.827 L19.994,10.827 L19.994,14.998 L5.835,14.998 ZM5.835,5.413 L19.994,5.413 L19.994,9.585 L5.835,9.585 L5.835,5.413 ZM5.835,0.000 L19.994,0.000 L19.994,4.172 L5.835,4.172 L5.835,0.000 ZM0.007,10.827 L4.429,10.827 L4.429,14.998 L0.007,14.998 L0.007,10.827 ZM0.007,5.413 L4.429,5.413 L4.429,9.585 L0.007,9.585 L0.007,5.413 ZM0.007,0.000 L4.429,0.000 L4.429,4.172 L0.007,4.172 L0.007,0.000 Z"/>
-                                        </svg>
+                                        <path fill-rule="evenodd" fill="rgb(141, 141, 141)"
+                                            d="M5.835,14.998 L5.835,10.827 L19.994,10.827 L19.994,14.998 L5.835,14.998 ZM5.835,5.413 L19.994,5.413 L19.994,9.585 L5.835,9.585 L5.835,5.413 ZM5.835,0.000 L19.994,0.000 L19.994,4.172 L5.835,4.172 L5.835,0.000 ZM0.007,10.827 L4.429,10.827 L4.429,14.998 L0.007,14.998 L0.007,10.827 ZM0.007,5.413 L4.429,5.413 L4.429,9.585 L0.007,9.585 L0.007,5.413 ZM0.007,0.000 L4.429,0.000 L4.429,4.172 L0.007,4.172 L0.007,0.000 Z" />
+                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -361,13 +365,14 @@
                                     </div>
                                     <div class="product-item__content-box">
                                         <p class="product-item__text">
-                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod  utlitoi labore et dolore magna aliqua.
+                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et
+                                            dolore magna aliqua.
                                         </p>
                                         <button class="product-item__btn">Add to cart</button>
                                     </div>
                                 </div>
                             </div>
-        
+
                             <div class="product-item product-item--sale">
                                 <div class="product-item__img-box">
                                     <img class="product-item__images" src="images/product/2.jpg" alt="product">
@@ -405,183 +410,8 @@
                                     </div>
                                     <div class="product-item__content-box">
                                         <p class="product-item__text">
-                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod  utlitoi labore et dolore magna aliqua.
-                                        </p>
-                                        <button class="product-item__btn">Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="product-item">
-                                <div class="product-item__img-box">
-                                    <img class="product-item__images" src="images/product/3.jpg" alt="product">
-                                    <div class="product-item__link-box">
-                                        <a class="product-item__link" href="#">
-                                            <svg width="19px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M18.709,18.219 L14.028,13.269 C15.231,11.813 15.891,9.982 15.891,8.075 C15.891,3.622 12.328,-0.002 7.947,-0.002 C3.568,-0.002 0.005,3.622 0.005,8.075 C0.005,12.529 3.568,16.153 7.947,16.153 C9.591,16.153 11.160,15.649 12.498,14.690 L17.216,19.680 C17.414,19.890 17.678,20.004 17.964,20.004 C18.232,20.004 18.486,19.899 18.680,19.710 C19.093,19.307 19.105,18.639 18.709,18.219 L18.709,18.219 ZM7.947,2.106 C11.185,2.106 13.819,4.785 13.819,8.075 C13.819,11.367 11.185,14.046 7.947,14.046 C4.711,14.046 2.078,11.367 2.078,8.075 C2.078,4.785 4.711,2.106 7.947,2.106 L7.947,2.106 Z" />
-                                            </svg>
-                                        </a>
-                                        <a class="product-item__link product-item__link--line" href="#">
-                                            <svg width="16px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M15.999,17.294 L14.854,4.396 C14.830,4.109 14.589,3.892 14.307,3.892 L11.953,3.892 C11.920,1.740 10.163,0.002 8.005,0.002 C5.847,0.002 4.090,1.740 4.057,3.892 L1.703,3.892 C1.417,3.892 1.180,4.109 1.156,4.396 L0.011,17.294 C0.011,17.311 0.007,17.327 0.007,17.343 C0.007,18.812 1.352,20.006 3.007,20.006 L13.003,20.006 C14.658,20.006 16.003,18.812 16.003,17.343 C16.003,17.327 16.003,17.311 15.999,17.294 L15.999,17.294 ZM8.005,1.106 C9.554,1.106 10.817,2.350 10.849,3.892 L5.161,3.892 C5.193,2.350 6.456,1.106 8.005,1.106 L8.005,1.106 ZM13.003,18.902 L3.007,18.902 C1.969,18.902 1.127,18.215 1.111,17.368 L2.206,5.001 L4.053,5.001 L4.053,6.678 C4.053,6.985 4.298,7.230 4.605,7.230 C4.911,7.230 5.157,6.985 5.157,6.678 L5.157,5.001 L10.849,5.001 L10.849,6.678 C10.849,6.985 11.095,7.230 11.401,7.230 C11.708,7.230 11.953,6.985 11.953,6.678 L11.953,5.001 L13.800,5.001 L14.899,17.368 C14.883,18.215 14.037,18.902 13.003,18.902 L13.003,18.902 Z" />
-                                            </svg>
-                                        </a>
-                                        <a class="product-item__link" href="#">
-                                            <svg width="23px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M16.894,-0.001 C14.470,-0.001 12.935,1.423 12.074,2.618 C11.851,2.929 11.661,3.239 11.501,3.532 C11.342,3.239 11.152,2.929 10.928,2.618 C10.068,1.423 8.533,-0.001 6.108,-0.001 C4.384,-0.001 2.810,0.697 1.675,1.964 C0.593,3.172 -0.004,4.791 -0.004,6.521 C-0.004,8.405 0.744,10.157 2.349,12.034 C3.783,13.713 5.847,15.443 8.236,17.447 C9.127,18.193 10.047,18.965 11.028,19.809 L11.057,19.834 C11.184,19.944 11.343,19.999 11.501,19.999 C11.660,19.999 11.818,19.944 11.945,19.834 L11.975,19.809 C12.955,18.965 13.876,18.193 14.766,17.447 C17.156,15.443 19.219,13.713 20.653,12.034 C22.258,10.157 23.006,8.405 23.006,6.521 C23.006,4.791 22.410,3.172 21.327,1.964 C20.192,0.696 18.618,-0.001 16.894,-0.001 ZM13.892,16.437 C13.124,17.080 12.334,17.743 11.501,18.455 C10.668,17.743 9.878,17.081 9.111,16.437 C4.434,12.516 1.345,9.926 1.345,6.521 C1.345,5.114 1.821,3.806 2.687,2.840 C3.562,1.863 4.777,1.325 6.108,1.325 C7.957,1.325 9.151,2.445 9.828,3.385 C10.435,4.228 10.752,5.078 10.860,5.404 C10.951,5.677 11.209,5.862 11.501,5.862 C11.793,5.862 12.052,5.677 12.142,5.404 C12.250,5.078 12.567,4.228 13.174,3.385 C13.851,2.445 15.046,1.325 16.894,1.325 C18.225,1.325 19.440,1.863 20.316,2.840 C21.181,3.806 21.658,5.114 21.658,6.521 C21.658,9.926 18.568,12.516 13.892,16.437 Z" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-item__wrapper-box">
-                                    <div class="product-item__box">
-                                        <div class="star" data-rateyo-rating="5"></div>
-                                        <h4 class="product-item__title">
-                                            White Polo Men’s T-Shirt
-                                        </h4>
-                                        <div class="product-item__price">
-                                            <div class="product-item__new-price">$34.00</div>
-                                            <div class="product-item__old-price">$27.00</div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__content-box">
-                                        <p class="product-item__text">
-                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod  utlitoi labore et dolore magna aliqua.
-                                        </p>
-                                        <button class="product-item__btn">Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="product-item product-item--sale">
-                                <div class="product-item__img-box">
-                                    <img class="product-item__images" src="images/product/4.jpg" alt="product">
-                                    <div class="product-item__link-box">
-                                        <a class="product-item__link" href="#">
-                                            <svg width="19px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M18.709,18.219 L14.028,13.269 C15.231,11.813 15.891,9.982 15.891,8.075 C15.891,3.622 12.328,-0.002 7.947,-0.002 C3.568,-0.002 0.005,3.622 0.005,8.075 C0.005,12.529 3.568,16.153 7.947,16.153 C9.591,16.153 11.160,15.649 12.498,14.690 L17.216,19.680 C17.414,19.890 17.678,20.004 17.964,20.004 C18.232,20.004 18.486,19.899 18.680,19.710 C19.093,19.307 19.105,18.639 18.709,18.219 L18.709,18.219 ZM7.947,2.106 C11.185,2.106 13.819,4.785 13.819,8.075 C13.819,11.367 11.185,14.046 7.947,14.046 C4.711,14.046 2.078,11.367 2.078,8.075 C2.078,4.785 4.711,2.106 7.947,2.106 L7.947,2.106 Z" />
-                                            </svg>
-                                        </a>
-                                        <a class="product-item__link product-item__link--line" href="#">
-                                            <svg width="16px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M15.999,17.294 L14.854,4.396 C14.830,4.109 14.589,3.892 14.307,3.892 L11.953,3.892 C11.920,1.740 10.163,0.002 8.005,0.002 C5.847,0.002 4.090,1.740 4.057,3.892 L1.703,3.892 C1.417,3.892 1.180,4.109 1.156,4.396 L0.011,17.294 C0.011,17.311 0.007,17.327 0.007,17.343 C0.007,18.812 1.352,20.006 3.007,20.006 L13.003,20.006 C14.658,20.006 16.003,18.812 16.003,17.343 C16.003,17.327 16.003,17.311 15.999,17.294 L15.999,17.294 ZM8.005,1.106 C9.554,1.106 10.817,2.350 10.849,3.892 L5.161,3.892 C5.193,2.350 6.456,1.106 8.005,1.106 L8.005,1.106 ZM13.003,18.902 L3.007,18.902 C1.969,18.902 1.127,18.215 1.111,17.368 L2.206,5.001 L4.053,5.001 L4.053,6.678 C4.053,6.985 4.298,7.230 4.605,7.230 C4.911,7.230 5.157,6.985 5.157,6.678 L5.157,5.001 L10.849,5.001 L10.849,6.678 C10.849,6.985 11.095,7.230 11.401,7.230 C11.708,7.230 11.953,6.985 11.953,6.678 L11.953,5.001 L13.800,5.001 L14.899,17.368 C14.883,18.215 14.037,18.902 13.003,18.902 L13.003,18.902 Z" />
-                                            </svg>
-                                        </a>
-                                        <a class="product-item__link" href="#">
-                                            <svg width="23px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M16.894,-0.001 C14.470,-0.001 12.935,1.423 12.074,2.618 C11.851,2.929 11.661,3.239 11.501,3.532 C11.342,3.239 11.152,2.929 10.928,2.618 C10.068,1.423 8.533,-0.001 6.108,-0.001 C4.384,-0.001 2.810,0.697 1.675,1.964 C0.593,3.172 -0.004,4.791 -0.004,6.521 C-0.004,8.405 0.744,10.157 2.349,12.034 C3.783,13.713 5.847,15.443 8.236,17.447 C9.127,18.193 10.047,18.965 11.028,19.809 L11.057,19.834 C11.184,19.944 11.343,19.999 11.501,19.999 C11.660,19.999 11.818,19.944 11.945,19.834 L11.975,19.809 C12.955,18.965 13.876,18.193 14.766,17.447 C17.156,15.443 19.219,13.713 20.653,12.034 C22.258,10.157 23.006,8.405 23.006,6.521 C23.006,4.791 22.410,3.172 21.327,1.964 C20.192,0.696 18.618,-0.001 16.894,-0.001 ZM13.892,16.437 C13.124,17.080 12.334,17.743 11.501,18.455 C10.668,17.743 9.878,17.081 9.111,16.437 C4.434,12.516 1.345,9.926 1.345,6.521 C1.345,5.114 1.821,3.806 2.687,2.840 C3.562,1.863 4.777,1.325 6.108,1.325 C7.957,1.325 9.151,2.445 9.828,3.385 C10.435,4.228 10.752,5.078 10.860,5.404 C10.951,5.677 11.209,5.862 11.501,5.862 C11.793,5.862 12.052,5.677 12.142,5.404 C12.250,5.078 12.567,4.228 13.174,3.385 C13.851,2.445 15.046,1.325 16.894,1.325 C18.225,1.325 19.440,1.863 20.316,2.840 C21.181,3.806 21.658,5.114 21.658,6.521 C21.658,9.926 18.568,12.516 13.892,16.437 Z" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-item__wrapper-box">
-                                    <div class="product-item__box">
-                                        <div class="star" data-rateyo-rating="4.5"></div>
-                                        <h4 class="product-item__title">
-                                            White Polo Men’s T-Shirt
-                                        </h4>
-                                        <div class="product-item__price">
-                                            <div class="product-item__new-price">$34.00</div>
-                                            <div class="product-item__old-price">$27.00</div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__content-box">
-                                        <p class="product-item__text">
-                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod  utlitoi labore et dolore magna aliqua.
-                                        </p>
-                                        <button class="product-item__btn">Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="product-item">
-                                <div class="product-item__img-box">
-                                    <img class="product-item__images" src="images/product/5.jpg" alt="product">
-                                    <div class="product-item__link-box">
-                                        <a class="product-item__link" href="#">
-                                            <svg width="19px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M18.709,18.219 L14.028,13.269 C15.231,11.813 15.891,9.982 15.891,8.075 C15.891,3.622 12.328,-0.002 7.947,-0.002 C3.568,-0.002 0.005,3.622 0.005,8.075 C0.005,12.529 3.568,16.153 7.947,16.153 C9.591,16.153 11.160,15.649 12.498,14.690 L17.216,19.680 C17.414,19.890 17.678,20.004 17.964,20.004 C18.232,20.004 18.486,19.899 18.680,19.710 C19.093,19.307 19.105,18.639 18.709,18.219 L18.709,18.219 ZM7.947,2.106 C11.185,2.106 13.819,4.785 13.819,8.075 C13.819,11.367 11.185,14.046 7.947,14.046 C4.711,14.046 2.078,11.367 2.078,8.075 C2.078,4.785 4.711,2.106 7.947,2.106 L7.947,2.106 Z" />
-                                            </svg>
-                                        </a>
-                                        <a class="product-item__link product-item__link--line" href="#">
-                                            <svg width="16px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M15.999,17.294 L14.854,4.396 C14.830,4.109 14.589,3.892 14.307,3.892 L11.953,3.892 C11.920,1.740 10.163,0.002 8.005,0.002 C5.847,0.002 4.090,1.740 4.057,3.892 L1.703,3.892 C1.417,3.892 1.180,4.109 1.156,4.396 L0.011,17.294 C0.011,17.311 0.007,17.327 0.007,17.343 C0.007,18.812 1.352,20.006 3.007,20.006 L13.003,20.006 C14.658,20.006 16.003,18.812 16.003,17.343 C16.003,17.327 16.003,17.311 15.999,17.294 L15.999,17.294 ZM8.005,1.106 C9.554,1.106 10.817,2.350 10.849,3.892 L5.161,3.892 C5.193,2.350 6.456,1.106 8.005,1.106 L8.005,1.106 ZM13.003,18.902 L3.007,18.902 C1.969,18.902 1.127,18.215 1.111,17.368 L2.206,5.001 L4.053,5.001 L4.053,6.678 C4.053,6.985 4.298,7.230 4.605,7.230 C4.911,7.230 5.157,6.985 5.157,6.678 L5.157,5.001 L10.849,5.001 L10.849,6.678 C10.849,6.985 11.095,7.230 11.401,7.230 C11.708,7.230 11.953,6.985 11.953,6.678 L11.953,5.001 L13.800,5.001 L14.899,17.368 C14.883,18.215 14.037,18.902 13.003,18.902 L13.003,18.902 Z" />
-                                            </svg>
-                                        </a>
-                                        <a class="product-item__link" href="#">
-                                            <svg width="23px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M16.894,-0.001 C14.470,-0.001 12.935,1.423 12.074,2.618 C11.851,2.929 11.661,3.239 11.501,3.532 C11.342,3.239 11.152,2.929 10.928,2.618 C10.068,1.423 8.533,-0.001 6.108,-0.001 C4.384,-0.001 2.810,0.697 1.675,1.964 C0.593,3.172 -0.004,4.791 -0.004,6.521 C-0.004,8.405 0.744,10.157 2.349,12.034 C3.783,13.713 5.847,15.443 8.236,17.447 C9.127,18.193 10.047,18.965 11.028,19.809 L11.057,19.834 C11.184,19.944 11.343,19.999 11.501,19.999 C11.660,19.999 11.818,19.944 11.945,19.834 L11.975,19.809 C12.955,18.965 13.876,18.193 14.766,17.447 C17.156,15.443 19.219,13.713 20.653,12.034 C22.258,10.157 23.006,8.405 23.006,6.521 C23.006,4.791 22.410,3.172 21.327,1.964 C20.192,0.696 18.618,-0.001 16.894,-0.001 ZM13.892,16.437 C13.124,17.080 12.334,17.743 11.501,18.455 C10.668,17.743 9.878,17.081 9.111,16.437 C4.434,12.516 1.345,9.926 1.345,6.521 C1.345,5.114 1.821,3.806 2.687,2.840 C3.562,1.863 4.777,1.325 6.108,1.325 C7.957,1.325 9.151,2.445 9.828,3.385 C10.435,4.228 10.752,5.078 10.860,5.404 C10.951,5.677 11.209,5.862 11.501,5.862 C11.793,5.862 12.052,5.677 12.142,5.404 C12.250,5.078 12.567,4.228 13.174,3.385 C13.851,2.445 15.046,1.325 16.894,1.325 C18.225,1.325 19.440,1.863 20.316,2.840 C21.181,3.806 21.658,5.114 21.658,6.521 C21.658,9.926 18.568,12.516 13.892,16.437 Z" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-item__wrapper-box">
-                                    <div class="product-item__box">
-                                        <div class="star" data-rateyo-rating="3.5"></div>
-                                        <h4 class="product-item__title">
-                                            White Polo Men’s T-Shirt
-                                        </h4>
-                                        <div class="product-item__price">
-                                            <div class="product-item__new-price">$34.00</div>
-                                            <div class="product-item__old-price">$27.00</div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__content-box">
-                                        <p class="product-item__text">
-                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod  utlitoi labore et dolore magna aliqua.
-                                        </p>
-                                        <button class="product-item__btn">Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="product-item product-item--sale">
-                                <div class="product-item__img-box">
-                                    <img class="product-item__images" src="images/product/6.jpg" alt="product">
-                                    <div class="product-item__link-box">
-                                        <a class="product-item__link" href="#">
-                                            <svg width="19px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M18.709,18.219 L14.028,13.269 C15.231,11.813 15.891,9.982 15.891,8.075 C15.891,3.622 12.328,-0.002 7.947,-0.002 C3.568,-0.002 0.005,3.622 0.005,8.075 C0.005,12.529 3.568,16.153 7.947,16.153 C9.591,16.153 11.160,15.649 12.498,14.690 L17.216,19.680 C17.414,19.890 17.678,20.004 17.964,20.004 C18.232,20.004 18.486,19.899 18.680,19.710 C19.093,19.307 19.105,18.639 18.709,18.219 L18.709,18.219 ZM7.947,2.106 C11.185,2.106 13.819,4.785 13.819,8.075 C13.819,11.367 11.185,14.046 7.947,14.046 C4.711,14.046 2.078,11.367 2.078,8.075 C2.078,4.785 4.711,2.106 7.947,2.106 L7.947,2.106 Z" />
-                                            </svg>
-                                        </a>
-                                        <a class="product-item__link product-item__link--line" href="#">
-                                            <svg width="16px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M15.999,17.294 L14.854,4.396 C14.830,4.109 14.589,3.892 14.307,3.892 L11.953,3.892 C11.920,1.740 10.163,0.002 8.005,0.002 C5.847,0.002 4.090,1.740 4.057,3.892 L1.703,3.892 C1.417,3.892 1.180,4.109 1.156,4.396 L0.011,17.294 C0.011,17.311 0.007,17.327 0.007,17.343 C0.007,18.812 1.352,20.006 3.007,20.006 L13.003,20.006 C14.658,20.006 16.003,18.812 16.003,17.343 C16.003,17.327 16.003,17.311 15.999,17.294 L15.999,17.294 ZM8.005,1.106 C9.554,1.106 10.817,2.350 10.849,3.892 L5.161,3.892 C5.193,2.350 6.456,1.106 8.005,1.106 L8.005,1.106 ZM13.003,18.902 L3.007,18.902 C1.969,18.902 1.127,18.215 1.111,17.368 L2.206,5.001 L4.053,5.001 L4.053,6.678 C4.053,6.985 4.298,7.230 4.605,7.230 C4.911,7.230 5.157,6.985 5.157,6.678 L5.157,5.001 L10.849,5.001 L10.849,6.678 C10.849,6.985 11.095,7.230 11.401,7.230 C11.708,7.230 11.953,6.985 11.953,6.678 L11.953,5.001 L13.800,5.001 L14.899,17.368 C14.883,18.215 14.037,18.902 13.003,18.902 L13.003,18.902 Z" />
-                                            </svg>
-                                        </a>
-                                        <a class="product-item__link" href="#">
-                                            <svg width="23px" height="20px">
-                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
-                                                    d="M16.894,-0.001 C14.470,-0.001 12.935,1.423 12.074,2.618 C11.851,2.929 11.661,3.239 11.501,3.532 C11.342,3.239 11.152,2.929 10.928,2.618 C10.068,1.423 8.533,-0.001 6.108,-0.001 C4.384,-0.001 2.810,0.697 1.675,1.964 C0.593,3.172 -0.004,4.791 -0.004,6.521 C-0.004,8.405 0.744,10.157 2.349,12.034 C3.783,13.713 5.847,15.443 8.236,17.447 C9.127,18.193 10.047,18.965 11.028,19.809 L11.057,19.834 C11.184,19.944 11.343,19.999 11.501,19.999 C11.660,19.999 11.818,19.944 11.945,19.834 L11.975,19.809 C12.955,18.965 13.876,18.193 14.766,17.447 C17.156,15.443 19.219,13.713 20.653,12.034 C22.258,10.157 23.006,8.405 23.006,6.521 C23.006,4.791 22.410,3.172 21.327,1.964 C20.192,0.696 18.618,-0.001 16.894,-0.001 ZM13.892,16.437 C13.124,17.080 12.334,17.743 11.501,18.455 C10.668,17.743 9.878,17.081 9.111,16.437 C4.434,12.516 1.345,9.926 1.345,6.521 C1.345,5.114 1.821,3.806 2.687,2.840 C3.562,1.863 4.777,1.325 6.108,1.325 C7.957,1.325 9.151,2.445 9.828,3.385 C10.435,4.228 10.752,5.078 10.860,5.404 C10.951,5.677 11.209,5.862 11.501,5.862 C11.793,5.862 12.052,5.677 12.142,5.404 C12.250,5.078 12.567,4.228 13.174,3.385 C13.851,2.445 15.046,1.325 16.894,1.325 C18.225,1.325 19.440,1.863 20.316,2.840 C21.181,3.806 21.658,5.114 21.658,6.521 C21.658,9.926 18.568,12.516 13.892,16.437 Z" />
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="product-item__wrapper-box">
-                                    <div class="product-item__box">
-                                        <div class="star" data-rateyo-rating="4"></div>
-                                        <h4 class="product-item__title">
-                                            White Polo Men’s T-Shirt
-                                        </h4>
-                                        <div class="product-item__price">
-                                            <div class="product-item__new-price">$34.00</div>
-                                            <div class="product-item__old-price">$27.00</div>
-                                        </div>
-                                    </div>
-                                    <div class="product-item__content-box">
-                                        <p class="product-item__text">
-                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod  utlitoi labore et dolore magna aliqua.
+                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et
+                                            dolore magna aliqua.
                                         </p>
                                         <button class="product-item__btn">Add to cart</button>
                                     </div>
@@ -625,13 +455,14 @@
                                     </div>
                                     <div class="product-item__content-box">
                                         <p class="product-item__text">
-                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod  utlitoi labore et dolore magna aliqua.
+                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et
+                                            dolore magna aliqua.
                                         </p>
                                         <button class="product-item__btn">Add to cart</button>
                                     </div>
                                 </div>
                             </div>
-        
+
                             <div class="product-item product-item--sale">
                                 <div class="product-item__img-box">
                                     <img class="product-item__images" src="images/product/4.jpg" alt="product">
@@ -669,13 +500,14 @@
                                     </div>
                                     <div class="product-item__content-box">
                                         <p class="product-item__text">
-                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod  utlitoi labore et dolore magna aliqua.
+                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et
+                                            dolore magna aliqua.
                                         </p>
                                         <button class="product-item__btn">Add to cart</button>
                                     </div>
                                 </div>
                             </div>
-        
+
                             <div class="product-item">
                                 <div class="product-item__img-box">
                                     <img class="product-item__images" src="images/product/5.jpg" alt="product">
@@ -713,13 +545,14 @@
                                     </div>
                                     <div class="product-item__content-box">
                                         <p class="product-item__text">
-                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod  utlitoi labore et dolore magna aliqua.
+                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et
+                                            dolore magna aliqua.
                                         </p>
                                         <button class="product-item__btn">Add to cart</button>
                                     </div>
                                 </div>
                             </div>
-        
+
                             <div class="product-item product-item--sale">
                                 <div class="product-item__img-box">
                                     <img class="product-item__images" src="images/product/6.jpg" alt="product">
@@ -757,7 +590,188 @@
                                     </div>
                                     <div class="product-item__content-box">
                                         <p class="product-item__text">
-                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod  utlitoi labore et dolore magna aliqua.
+                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et
+                                            dolore magna aliqua.
+                                        </p>
+                                        <button class="product-item__btn">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-item">
+                                <div class="product-item__img-box">
+                                    <img class="product-item__images" src="images/product/3.jpg" alt="product">
+                                    <div class="product-item__link-box">
+                                        <a class="product-item__link" href="#">
+                                            <svg width="19px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M18.709,18.219 L14.028,13.269 C15.231,11.813 15.891,9.982 15.891,8.075 C15.891,3.622 12.328,-0.002 7.947,-0.002 C3.568,-0.002 0.005,3.622 0.005,8.075 C0.005,12.529 3.568,16.153 7.947,16.153 C9.591,16.153 11.160,15.649 12.498,14.690 L17.216,19.680 C17.414,19.890 17.678,20.004 17.964,20.004 C18.232,20.004 18.486,19.899 18.680,19.710 C19.093,19.307 19.105,18.639 18.709,18.219 L18.709,18.219 ZM7.947,2.106 C11.185,2.106 13.819,4.785 13.819,8.075 C13.819,11.367 11.185,14.046 7.947,14.046 C4.711,14.046 2.078,11.367 2.078,8.075 C2.078,4.785 4.711,2.106 7.947,2.106 L7.947,2.106 Z" />
+                                            </svg>
+                                        </a>
+                                        <a class="product-item__link product-item__link--line" href="#">
+                                            <svg width="16px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M15.999,17.294 L14.854,4.396 C14.830,4.109 14.589,3.892 14.307,3.892 L11.953,3.892 C11.920,1.740 10.163,0.002 8.005,0.002 C5.847,0.002 4.090,1.740 4.057,3.892 L1.703,3.892 C1.417,3.892 1.180,4.109 1.156,4.396 L0.011,17.294 C0.011,17.311 0.007,17.327 0.007,17.343 C0.007,18.812 1.352,20.006 3.007,20.006 L13.003,20.006 C14.658,20.006 16.003,18.812 16.003,17.343 C16.003,17.327 16.003,17.311 15.999,17.294 L15.999,17.294 ZM8.005,1.106 C9.554,1.106 10.817,2.350 10.849,3.892 L5.161,3.892 C5.193,2.350 6.456,1.106 8.005,1.106 L8.005,1.106 ZM13.003,18.902 L3.007,18.902 C1.969,18.902 1.127,18.215 1.111,17.368 L2.206,5.001 L4.053,5.001 L4.053,6.678 C4.053,6.985 4.298,7.230 4.605,7.230 C4.911,7.230 5.157,6.985 5.157,6.678 L5.157,5.001 L10.849,5.001 L10.849,6.678 C10.849,6.985 11.095,7.230 11.401,7.230 C11.708,7.230 11.953,6.985 11.953,6.678 L11.953,5.001 L13.800,5.001 L14.899,17.368 C14.883,18.215 14.037,18.902 13.003,18.902 L13.003,18.902 Z" />
+                                            </svg>
+                                        </a>
+                                        <a class="product-item__link" href="#">
+                                            <svg width="23px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M16.894,-0.001 C14.470,-0.001 12.935,1.423 12.074,2.618 C11.851,2.929 11.661,3.239 11.501,3.532 C11.342,3.239 11.152,2.929 10.928,2.618 C10.068,1.423 8.533,-0.001 6.108,-0.001 C4.384,-0.001 2.810,0.697 1.675,1.964 C0.593,3.172 -0.004,4.791 -0.004,6.521 C-0.004,8.405 0.744,10.157 2.349,12.034 C3.783,13.713 5.847,15.443 8.236,17.447 C9.127,18.193 10.047,18.965 11.028,19.809 L11.057,19.834 C11.184,19.944 11.343,19.999 11.501,19.999 C11.660,19.999 11.818,19.944 11.945,19.834 L11.975,19.809 C12.955,18.965 13.876,18.193 14.766,17.447 C17.156,15.443 19.219,13.713 20.653,12.034 C22.258,10.157 23.006,8.405 23.006,6.521 C23.006,4.791 22.410,3.172 21.327,1.964 C20.192,0.696 18.618,-0.001 16.894,-0.001 ZM13.892,16.437 C13.124,17.080 12.334,17.743 11.501,18.455 C10.668,17.743 9.878,17.081 9.111,16.437 C4.434,12.516 1.345,9.926 1.345,6.521 C1.345,5.114 1.821,3.806 2.687,2.840 C3.562,1.863 4.777,1.325 6.108,1.325 C7.957,1.325 9.151,2.445 9.828,3.385 C10.435,4.228 10.752,5.078 10.860,5.404 C10.951,5.677 11.209,5.862 11.501,5.862 C11.793,5.862 12.052,5.677 12.142,5.404 C12.250,5.078 12.567,4.228 13.174,3.385 C13.851,2.445 15.046,1.325 16.894,1.325 C18.225,1.325 19.440,1.863 20.316,2.840 C21.181,3.806 21.658,5.114 21.658,6.521 C21.658,9.926 18.568,12.516 13.892,16.437 Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-item__wrapper-box">
+                                    <div class="product-item__box">
+                                        <div class="star" data-rateyo-rating="5"></div>
+                                        <h4 class="product-item__title">
+                                            White Polo Men’s T-Shirt
+                                        </h4>
+                                        <div class="product-item__price">
+                                            <div class="product-item__new-price">$34.00</div>
+                                            <div class="product-item__old-price">$27.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content-box">
+                                        <p class="product-item__text">
+                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et
+                                            dolore magna aliqua.
+                                        </p>
+                                        <button class="product-item__btn">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-item product-item--sale">
+                                <div class="product-item__img-box">
+                                    <img class="product-item__images" src="images/product/4.jpg" alt="product">
+                                    <div class="product-item__link-box">
+                                        <a class="product-item__link" href="#">
+                                            <svg width="19px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M18.709,18.219 L14.028,13.269 C15.231,11.813 15.891,9.982 15.891,8.075 C15.891,3.622 12.328,-0.002 7.947,-0.002 C3.568,-0.002 0.005,3.622 0.005,8.075 C0.005,12.529 3.568,16.153 7.947,16.153 C9.591,16.153 11.160,15.649 12.498,14.690 L17.216,19.680 C17.414,19.890 17.678,20.004 17.964,20.004 C18.232,20.004 18.486,19.899 18.680,19.710 C19.093,19.307 19.105,18.639 18.709,18.219 L18.709,18.219 ZM7.947,2.106 C11.185,2.106 13.819,4.785 13.819,8.075 C13.819,11.367 11.185,14.046 7.947,14.046 C4.711,14.046 2.078,11.367 2.078,8.075 C2.078,4.785 4.711,2.106 7.947,2.106 L7.947,2.106 Z" />
+                                            </svg>
+                                        </a>
+                                        <a class="product-item__link product-item__link--line" href="#">
+                                            <svg width="16px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M15.999,17.294 L14.854,4.396 C14.830,4.109 14.589,3.892 14.307,3.892 L11.953,3.892 C11.920,1.740 10.163,0.002 8.005,0.002 C5.847,0.002 4.090,1.740 4.057,3.892 L1.703,3.892 C1.417,3.892 1.180,4.109 1.156,4.396 L0.011,17.294 C0.011,17.311 0.007,17.327 0.007,17.343 C0.007,18.812 1.352,20.006 3.007,20.006 L13.003,20.006 C14.658,20.006 16.003,18.812 16.003,17.343 C16.003,17.327 16.003,17.311 15.999,17.294 L15.999,17.294 ZM8.005,1.106 C9.554,1.106 10.817,2.350 10.849,3.892 L5.161,3.892 C5.193,2.350 6.456,1.106 8.005,1.106 L8.005,1.106 ZM13.003,18.902 L3.007,18.902 C1.969,18.902 1.127,18.215 1.111,17.368 L2.206,5.001 L4.053,5.001 L4.053,6.678 C4.053,6.985 4.298,7.230 4.605,7.230 C4.911,7.230 5.157,6.985 5.157,6.678 L5.157,5.001 L10.849,5.001 L10.849,6.678 C10.849,6.985 11.095,7.230 11.401,7.230 C11.708,7.230 11.953,6.985 11.953,6.678 L11.953,5.001 L13.800,5.001 L14.899,17.368 C14.883,18.215 14.037,18.902 13.003,18.902 L13.003,18.902 Z" />
+                                            </svg>
+                                        </a>
+                                        <a class="product-item__link" href="#">
+                                            <svg width="23px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M16.894,-0.001 C14.470,-0.001 12.935,1.423 12.074,2.618 C11.851,2.929 11.661,3.239 11.501,3.532 C11.342,3.239 11.152,2.929 10.928,2.618 C10.068,1.423 8.533,-0.001 6.108,-0.001 C4.384,-0.001 2.810,0.697 1.675,1.964 C0.593,3.172 -0.004,4.791 -0.004,6.521 C-0.004,8.405 0.744,10.157 2.349,12.034 C3.783,13.713 5.847,15.443 8.236,17.447 C9.127,18.193 10.047,18.965 11.028,19.809 L11.057,19.834 C11.184,19.944 11.343,19.999 11.501,19.999 C11.660,19.999 11.818,19.944 11.945,19.834 L11.975,19.809 C12.955,18.965 13.876,18.193 14.766,17.447 C17.156,15.443 19.219,13.713 20.653,12.034 C22.258,10.157 23.006,8.405 23.006,6.521 C23.006,4.791 22.410,3.172 21.327,1.964 C20.192,0.696 18.618,-0.001 16.894,-0.001 ZM13.892,16.437 C13.124,17.080 12.334,17.743 11.501,18.455 C10.668,17.743 9.878,17.081 9.111,16.437 C4.434,12.516 1.345,9.926 1.345,6.521 C1.345,5.114 1.821,3.806 2.687,2.840 C3.562,1.863 4.777,1.325 6.108,1.325 C7.957,1.325 9.151,2.445 9.828,3.385 C10.435,4.228 10.752,5.078 10.860,5.404 C10.951,5.677 11.209,5.862 11.501,5.862 C11.793,5.862 12.052,5.677 12.142,5.404 C12.250,5.078 12.567,4.228 13.174,3.385 C13.851,2.445 15.046,1.325 16.894,1.325 C18.225,1.325 19.440,1.863 20.316,2.840 C21.181,3.806 21.658,5.114 21.658,6.521 C21.658,9.926 18.568,12.516 13.892,16.437 Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-item__wrapper-box">
+                                    <div class="product-item__box">
+                                        <div class="star" data-rateyo-rating="4.5"></div>
+                                        <h4 class="product-item__title">
+                                            White Polo Men’s T-Shirt
+                                        </h4>
+                                        <div class="product-item__price">
+                                            <div class="product-item__new-price">$34.00</div>
+                                            <div class="product-item__old-price">$27.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content-box">
+                                        <p class="product-item__text">
+                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et
+                                            dolore magna aliqua.
+                                        </p>
+                                        <button class="product-item__btn">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-item">
+                                <div class="product-item__img-box">
+                                    <img class="product-item__images" src="images/product/5.jpg" alt="product">
+                                    <div class="product-item__link-box">
+                                        <a class="product-item__link" href="#">
+                                            <svg width="19px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M18.709,18.219 L14.028,13.269 C15.231,11.813 15.891,9.982 15.891,8.075 C15.891,3.622 12.328,-0.002 7.947,-0.002 C3.568,-0.002 0.005,3.622 0.005,8.075 C0.005,12.529 3.568,16.153 7.947,16.153 C9.591,16.153 11.160,15.649 12.498,14.690 L17.216,19.680 C17.414,19.890 17.678,20.004 17.964,20.004 C18.232,20.004 18.486,19.899 18.680,19.710 C19.093,19.307 19.105,18.639 18.709,18.219 L18.709,18.219 ZM7.947,2.106 C11.185,2.106 13.819,4.785 13.819,8.075 C13.819,11.367 11.185,14.046 7.947,14.046 C4.711,14.046 2.078,11.367 2.078,8.075 C2.078,4.785 4.711,2.106 7.947,2.106 L7.947,2.106 Z" />
+                                            </svg>
+                                        </a>
+                                        <a class="product-item__link product-item__link--line" href="#">
+                                            <svg width="16px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M15.999,17.294 L14.854,4.396 C14.830,4.109 14.589,3.892 14.307,3.892 L11.953,3.892 C11.920,1.740 10.163,0.002 8.005,0.002 C5.847,0.002 4.090,1.740 4.057,3.892 L1.703,3.892 C1.417,3.892 1.180,4.109 1.156,4.396 L0.011,17.294 C0.011,17.311 0.007,17.327 0.007,17.343 C0.007,18.812 1.352,20.006 3.007,20.006 L13.003,20.006 C14.658,20.006 16.003,18.812 16.003,17.343 C16.003,17.327 16.003,17.311 15.999,17.294 L15.999,17.294 ZM8.005,1.106 C9.554,1.106 10.817,2.350 10.849,3.892 L5.161,3.892 C5.193,2.350 6.456,1.106 8.005,1.106 L8.005,1.106 ZM13.003,18.902 L3.007,18.902 C1.969,18.902 1.127,18.215 1.111,17.368 L2.206,5.001 L4.053,5.001 L4.053,6.678 C4.053,6.985 4.298,7.230 4.605,7.230 C4.911,7.230 5.157,6.985 5.157,6.678 L5.157,5.001 L10.849,5.001 L10.849,6.678 C10.849,6.985 11.095,7.230 11.401,7.230 C11.708,7.230 11.953,6.985 11.953,6.678 L11.953,5.001 L13.800,5.001 L14.899,17.368 C14.883,18.215 14.037,18.902 13.003,18.902 L13.003,18.902 Z" />
+                                            </svg>
+                                        </a>
+                                        <a class="product-item__link" href="#">
+                                            <svg width="23px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M16.894,-0.001 C14.470,-0.001 12.935,1.423 12.074,2.618 C11.851,2.929 11.661,3.239 11.501,3.532 C11.342,3.239 11.152,2.929 10.928,2.618 C10.068,1.423 8.533,-0.001 6.108,-0.001 C4.384,-0.001 2.810,0.697 1.675,1.964 C0.593,3.172 -0.004,4.791 -0.004,6.521 C-0.004,8.405 0.744,10.157 2.349,12.034 C3.783,13.713 5.847,15.443 8.236,17.447 C9.127,18.193 10.047,18.965 11.028,19.809 L11.057,19.834 C11.184,19.944 11.343,19.999 11.501,19.999 C11.660,19.999 11.818,19.944 11.945,19.834 L11.975,19.809 C12.955,18.965 13.876,18.193 14.766,17.447 C17.156,15.443 19.219,13.713 20.653,12.034 C22.258,10.157 23.006,8.405 23.006,6.521 C23.006,4.791 22.410,3.172 21.327,1.964 C20.192,0.696 18.618,-0.001 16.894,-0.001 ZM13.892,16.437 C13.124,17.080 12.334,17.743 11.501,18.455 C10.668,17.743 9.878,17.081 9.111,16.437 C4.434,12.516 1.345,9.926 1.345,6.521 C1.345,5.114 1.821,3.806 2.687,2.840 C3.562,1.863 4.777,1.325 6.108,1.325 C7.957,1.325 9.151,2.445 9.828,3.385 C10.435,4.228 10.752,5.078 10.860,5.404 C10.951,5.677 11.209,5.862 11.501,5.862 C11.793,5.862 12.052,5.677 12.142,5.404 C12.250,5.078 12.567,4.228 13.174,3.385 C13.851,2.445 15.046,1.325 16.894,1.325 C18.225,1.325 19.440,1.863 20.316,2.840 C21.181,3.806 21.658,5.114 21.658,6.521 C21.658,9.926 18.568,12.516 13.892,16.437 Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-item__wrapper-box">
+                                    <div class="product-item__box">
+                                        <div class="star" data-rateyo-rating="3.5"></div>
+                                        <h4 class="product-item__title">
+                                            White Polo Men’s T-Shirt
+                                        </h4>
+                                        <div class="product-item__price">
+                                            <div class="product-item__new-price">$34.00</div>
+                                            <div class="product-item__old-price">$27.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content-box">
+                                        <p class="product-item__text">
+                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et
+                                            dolore magna aliqua.
+                                        </p>
+                                        <button class="product-item__btn">Add to cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product-item product-item--sale">
+                                <div class="product-item__img-box">
+                                    <img class="product-item__images" src="images/product/6.jpg" alt="product">
+                                    <div class="product-item__link-box">
+                                        <a class="product-item__link" href="#">
+                                            <svg width="19px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M18.709,18.219 L14.028,13.269 C15.231,11.813 15.891,9.982 15.891,8.075 C15.891,3.622 12.328,-0.002 7.947,-0.002 C3.568,-0.002 0.005,3.622 0.005,8.075 C0.005,12.529 3.568,16.153 7.947,16.153 C9.591,16.153 11.160,15.649 12.498,14.690 L17.216,19.680 C17.414,19.890 17.678,20.004 17.964,20.004 C18.232,20.004 18.486,19.899 18.680,19.710 C19.093,19.307 19.105,18.639 18.709,18.219 L18.709,18.219 ZM7.947,2.106 C11.185,2.106 13.819,4.785 13.819,8.075 C13.819,11.367 11.185,14.046 7.947,14.046 C4.711,14.046 2.078,11.367 2.078,8.075 C2.078,4.785 4.711,2.106 7.947,2.106 L7.947,2.106 Z" />
+                                            </svg>
+                                        </a>
+                                        <a class="product-item__link product-item__link--line" href="#">
+                                            <svg width="16px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M15.999,17.294 L14.854,4.396 C14.830,4.109 14.589,3.892 14.307,3.892 L11.953,3.892 C11.920,1.740 10.163,0.002 8.005,0.002 C5.847,0.002 4.090,1.740 4.057,3.892 L1.703,3.892 C1.417,3.892 1.180,4.109 1.156,4.396 L0.011,17.294 C0.011,17.311 0.007,17.327 0.007,17.343 C0.007,18.812 1.352,20.006 3.007,20.006 L13.003,20.006 C14.658,20.006 16.003,18.812 16.003,17.343 C16.003,17.327 16.003,17.311 15.999,17.294 L15.999,17.294 ZM8.005,1.106 C9.554,1.106 10.817,2.350 10.849,3.892 L5.161,3.892 C5.193,2.350 6.456,1.106 8.005,1.106 L8.005,1.106 ZM13.003,18.902 L3.007,18.902 C1.969,18.902 1.127,18.215 1.111,17.368 L2.206,5.001 L4.053,5.001 L4.053,6.678 C4.053,6.985 4.298,7.230 4.605,7.230 C4.911,7.230 5.157,6.985 5.157,6.678 L5.157,5.001 L10.849,5.001 L10.849,6.678 C10.849,6.985 11.095,7.230 11.401,7.230 C11.708,7.230 11.953,6.985 11.953,6.678 L11.953,5.001 L13.800,5.001 L14.899,17.368 C14.883,18.215 14.037,18.902 13.003,18.902 L13.003,18.902 Z" />
+                                            </svg>
+                                        </a>
+                                        <a class="product-item__link" href="#">
+                                            <svg width="23px" height="20px">
+                                                <path fill-rule="evenodd" fill="rgb(41, 40, 45)"
+                                                    d="M16.894,-0.001 C14.470,-0.001 12.935,1.423 12.074,2.618 C11.851,2.929 11.661,3.239 11.501,3.532 C11.342,3.239 11.152,2.929 10.928,2.618 C10.068,1.423 8.533,-0.001 6.108,-0.001 C4.384,-0.001 2.810,0.697 1.675,1.964 C0.593,3.172 -0.004,4.791 -0.004,6.521 C-0.004,8.405 0.744,10.157 2.349,12.034 C3.783,13.713 5.847,15.443 8.236,17.447 C9.127,18.193 10.047,18.965 11.028,19.809 L11.057,19.834 C11.184,19.944 11.343,19.999 11.501,19.999 C11.660,19.999 11.818,19.944 11.945,19.834 L11.975,19.809 C12.955,18.965 13.876,18.193 14.766,17.447 C17.156,15.443 19.219,13.713 20.653,12.034 C22.258,10.157 23.006,8.405 23.006,6.521 C23.006,4.791 22.410,3.172 21.327,1.964 C20.192,0.696 18.618,-0.001 16.894,-0.001 ZM13.892,16.437 C13.124,17.080 12.334,17.743 11.501,18.455 C10.668,17.743 9.878,17.081 9.111,16.437 C4.434,12.516 1.345,9.926 1.345,6.521 C1.345,5.114 1.821,3.806 2.687,2.840 C3.562,1.863 4.777,1.325 6.108,1.325 C7.957,1.325 9.151,2.445 9.828,3.385 C10.435,4.228 10.752,5.078 10.860,5.404 C10.951,5.677 11.209,5.862 11.501,5.862 C11.793,5.862 12.052,5.677 12.142,5.404 C12.250,5.078 12.567,4.228 13.174,3.385 C13.851,2.445 15.046,1.325 16.894,1.325 C18.225,1.325 19.440,1.863 20.316,2.840 C21.181,3.806 21.658,5.114 21.658,6.521 C21.658,9.926 18.568,12.516 13.892,16.437 Z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-item__wrapper-box">
+                                    <div class="product-item__box">
+                                        <div class="star" data-rateyo-rating="4"></div>
+                                        <h4 class="product-item__title">
+                                            White Polo Men’s T-Shirt
+                                        </h4>
+                                        <div class="product-item__price">
+                                            <div class="product-item__new-price">$34.00</div>
+                                            <div class="product-item__old-price">$27.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__content-box">
+                                        <p class="product-item__text">
+                                            Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod utlitoi labore et
+                                            dolore magna aliqua.
                                         </p>
                                         <button class="product-item__btn">Add to cart</button>
                                     </div>
@@ -790,7 +804,7 @@
                             <a class="pagination__next pagination__arrows" href="#">
                                 следующий
                             </a>
-                
+
                         </div>
 
                     </div>
@@ -798,7 +812,7 @@
             </div>
         </section>
 
-        
+
 
     </main>
 
@@ -835,7 +849,7 @@
                                             d="M 14.355469 4.148438 C 14.367188 4.273438 14.367188 4.398438 14.367188 4.523438 C 14.367188 8.316406 11.066406 12.683594 5.035156 12.683594 C 3.175781 12.683594 1.453125 12.214844 0 11.398438 C 0.265625 11.425781 0.519531 11.433594 0.792969 11.433594 C 2.324219 11.433594 3.734375 10.980469 4.863281 10.207031 C 3.421875 10.179688 2.214844 9.355469 1.796875 8.21875 C 2 8.242188 2.203125 8.261719 2.417969 8.261719 C 2.710938 8.261719 3.003906 8.226562 3.277344 8.164062 C 1.777344 7.898438 0.648438 6.742188 0.648438 5.347656 L 0.648438 5.3125 C 1.085938 5.527344 1.59375 5.660156 2.132812 5.675781 C 1.25 5.160156 0.671875 4.28125 0.671875 3.285156 C 0.671875 2.753906 0.832031 2.265625 1.117188 1.839844 C 2.730469 3.578125 5.15625 4.71875 7.878906 4.839844 C 7.828125 4.628906 7.796875 4.40625 7.796875 4.183594 C 7.796875 2.601562 9.257812 1.316406 11.074219 1.316406 C 12.019531 1.316406 12.871094 1.660156 13.472656 2.222656 C 14.214844 2.097656 14.921875 1.855469 15.554688 1.527344 C 15.308594 2.195312 14.792969 2.753906 14.113281 3.109375 C 14.773438 3.046875 15.410156 2.886719 16 2.664062 C 15.554688 3.234375 14.996094 3.738281 14.355469 4.148438 Z M 14.355469 4.148438 " />
                                     </g>
                                 </svg>
-    
+
                             </a>
                         </li>
                         <li class="footer-top__social-item">
@@ -930,6 +944,7 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
+
 </html>
