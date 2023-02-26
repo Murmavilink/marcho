@@ -31,3 +31,11 @@ export const menu = () => {
     addClass(idLink);
 };
 
+export const burgerMenu = () => {
+    const burgerBtn = document.querySelector('.menu__btn');
+    const menuList = document.querySelector('.menu__list');
+
+    burgerBtn.addEventListener('click', () => {
+        menuList.classList.toggle('menu__list--active');
+    });
+};
