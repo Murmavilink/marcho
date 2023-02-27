@@ -34,7 +34,8 @@
 }
 
 
-a,body {
+a,
+body {
   font-family: "Quicksand-Medium", sans-serif;
   font-weight: 500
 }
@@ -1395,6 +1396,20 @@ footer {
 
   .menu__btn::after {
     bottom: 0
+  }
+
+  .menu__btn--active span {
+    display: none;
+  }
+
+  .menu__btn--active::before {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+
+  .menu__btn--active::after {
+    top: 10px;
+    transform: rotate(-45deg);
   }
 
   .user-nav {
