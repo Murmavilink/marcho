@@ -1,24 +1,42 @@
 import Swiper from 'swiper/bundle';
 
 export const slider = () => {
-  const swiper = new Swiper('.top-slider__container', {
-    loop: true,
-    speed: 1000,
-    effect: 'fade',
+  const link = document.getElementById('main-page');
 
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
+  const startSlider = () => {
+    const swiper = new Swiper('.top-slider__container', {
+      loop: true,
+      speed: 1000,
+      effect: 'fade',
+  
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+  
+      fadeEffect: {
+        crossFade: true
+      },
+  
+      pagination: {
+        el: ".top-slider__pagination",
+        clickable: true,
+      },
+  
+    });
+  };
 
-    fadeEffect: {
-      crossFade: true
-    },
+  
+  try {
+    
+    if(!link) throw new Error('Верните идентификатор на место, пожалуйста!');
+    
+    link.addEventListener('click', () => setTimeout(startSlider, 500));
 
-    pagination: {
-      el: ".top-slider__pagination",
-      clickable: true,
-    },
+  } catch (error) {
+    console.log(error.message);
+  }
+    
 
-  });
+  startSlider();
 };
