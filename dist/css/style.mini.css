@@ -1528,6 +1528,22 @@ footer {
   text-align: center
 }
 
+.product-item__discount {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  line-height: 1;
+  padding: 12px 26px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #fe3e57;
+  box-shadow: 0 7px 20px 0 rgb(255 17 48 / 30%);
+}
+
+.product-item__id {
+  display: none;
+}
+
 .product-item.product-item--list {
   min-width: 100%;
   display: flex;
