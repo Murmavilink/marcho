@@ -1,9 +1,7 @@
 import Swiper from 'swiper/bundle';
 
 export const slider = () => {
-  const link = document.getElementById('main-page');
-
-  const startSlider = () => {
+    
     const swiper = new Swiper('.top-slider__container', {
       loop: true,
       speed: 1000,
@@ -24,19 +22,5 @@ export const slider = () => {
       },
   
     });
-  };
 
-  
-  try {
-    
-    if(!link) throw new Error('Верните идентификатор на место, пожалуйста!');
-    
-    link.addEventListener('click', () => setTimeout(startSlider, 500));
-
-  } catch (error) {
-    console.log(error.message);
-  }
-    
-
-  startSlider();
 };

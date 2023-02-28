@@ -1,8 +1,7 @@
 import { menu } from "./modules/menu";
 import { burgerMenu } from "./modules/menu";
-import { slider } from "./modules/slider";
-
+import { mainPageListener } from "./modules/mainPageListener";
 
 menu();
 burgerMenu();
-slider();
+mainPageListener();
