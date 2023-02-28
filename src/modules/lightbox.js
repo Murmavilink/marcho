@@ -4,12 +4,14 @@ export const lightbox = (width = 80, height = 80) => {
     const modalContent = modal.querySelector('.modal-fashion__content');
 
 
+    if(window.innerWidth <= 425) {
+        width = 90;
+        height = 50;
+    }
+
+
     const handlerModal = (size) => {
-        if (size) {
-            modalContent.style.cssText = `color: #fff; font-size: ${size}px; line-height: ${size}px; padding: 30px`;
-        } else {
-            modalContent.style.cssText = '';
-        }
+        size ? modalContent.style.cssText = `color: #fff; font-size: ${size}px; line-height: ${size}px; padding: 30px` : modalContent.style.cssText = '';
 
         document.body.classList.toggle('stop-scrolling');
         modalContent.innerHTML = '';
