@@ -8,6 +8,7 @@ export const viewGoods = () => {
         buttonGrid.classList.toggle('shop-content__filter-btn--active');
         buttonList.classList.toggle('shop-content__filter-btn--active');
         render({
+            selectorWrap: '.shop-content__inner',
             productView: view
         });
     };

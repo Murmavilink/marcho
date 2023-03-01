@@ -57,6 +57,8 @@ export const render = ({display, stack, selectorWrap, productView}) => {
         const productСhanges = () => {
             const goods = document.querySelectorAll('.product-item');
 
+            goodsWrap.classList.toggle('shop-content__nogrid');
+
             goods.forEach(product => {
                 product.classList.toggle('product-item--list');
             });
