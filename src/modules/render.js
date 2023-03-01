@@ -1,6 +1,6 @@
 import { getData } from "./getData";
 
-export const render = (display, stack, selectorWrap) => {
+export const render = ({display, stack, selectorWrap, productView}) => {
     const goodsWrap = document.querySelector(selectorWrap);
 
     const renderGoods = (data) => {
@@ -8,7 +8,7 @@ export const render = (display, stack, selectorWrap) => {
 
         data.forEach(item => {
             goodsWrap.insertAdjacentHTML('beforeend', `
-                <div class="product-item">
+            <div class="product-item">
                 <div class="product-item__id">${item.id}</div>
                     <div class="product-item__img-box">
                     ${item.discount ? `<div class="product-item__discount">${item.discount}</div>` : ''}
@@ -41,26 +41,41 @@ export const render = (display, stack, selectorWrap) => {
                             </div>
                         </div>
                         <div class="product-item__content-box">
-                            <p class="product-item__text">
-                                Lorem ipsum dolor sit amet, adipiscing elit, sed de eusmod  utlitoi labore et dolore magna aliqua.
-                            </p>
-                            <button class="product-item__btn">Add to cart</button>
+                            <button class="product-item__btn">Добавить в карзину</button>
                         </div>
                     </div>
-                    </div>`);
-        });
-    };
+                    </div>`)});
+                };
 
     getData().then(data => {
+        
+        const sliceArray = (array, stack) => {
+            return array.slice(0, stack);
+        };
+
+
+        const productСhanges = () => {
+            const goods = document.querySelectorAll('.product-item');
+
+            goods.forEach(product => {
+                product.classList.toggle('product-item--list');
+            });
+        };
+
 
         if(display === 'main') {
-            const newData = data.slice(0, stack);
-            renderGoods(newData);
+            renderGoods(sliceArray(data, stack));
         } else if(display === 'shop') {
-            const newData = data.slice(0, stack);
-            renderGoods(newData);
+            renderGoods(sliceArray(data, stack));
         }
+    
         
+        if(productView === 'product-item--list') {
+            productСhanges();
+        } else if(productView === 'product-item--grid') {
+            productСhanges();
+        }
+
     });
 
 };

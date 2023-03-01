@@ -5,4 +5,8 @@ import { render } from "./modules/render";
 
 slider();
 lightbox(80, 80);
-render('main', 6, '.product__items');
+render({
+    display: 'main', 
+    stack: 6, 
+    selectorWrap: '.product__items'
+});

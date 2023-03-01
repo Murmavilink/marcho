@@ -1,11 +1,8 @@
-import Swup from 'swup';
-
 const links = document.querySelectorAll('.menu__list-link');
 
 
-export const menu = () => {
+export const menu = (redirect = false) => {
     const idLink = sessionStorage.getItem('idLink') || 0;
-    const swup = new Swup();
 
     const removeClass = () => links.forEach(link => link.classList.remove('menu__list-link--active'));
 
@@ -23,6 +20,15 @@ export const menu = () => {
     
 
     addClass(idLink);
+
+    if(redirect) {
+        links.forEach((link, index) => {
+            if(window.location.pathname === `/${link.getAttribute('href')}`) {
+                removeClass();
+                addClass(index);
+            }
+        });
+    }
 };
 
 
