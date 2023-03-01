@@ -5,7 +5,7 @@ import { slider } from "./slider";
 import { lightbox } from './lightbox';
 import { render } from "./render";
 import { viewGoods } from "./filter";
-
+import { smoothScroll } from './smoothScroll';
 
 export const pageListener = () => {
   const swup = new Swup();
@@ -20,9 +20,8 @@ export const pageListener = () => {
             stack: 6, 
             selectorWrap: '.product__items'
         });
-        
         menu(true);
-
+        smoothScroll();
     } else if(window.location.pathname === '/shop.html') {
         viewGoods();
         render({
@@ -30,7 +29,6 @@ export const pageListener = () => {
             stack: 10, 
             selectorWrap: '.shop-content__inner'
         });
-
         menu(true);
     }
 
