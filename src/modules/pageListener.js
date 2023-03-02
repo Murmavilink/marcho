@@ -33,6 +33,8 @@ export const pageListener = () => {
             selectorWrap: '.shop-content__inner'
         });
         menu(true);
+    } else {
+      location.reload();
     }
 
   });
