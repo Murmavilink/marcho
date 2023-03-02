@@ -2,6 +2,7 @@ import { slider } from "./modules/slider";
 import { lightbox } from "./modules/lightbox";
 import { render } from "./modules/render";
 import { smoothScroll } from "./modules/smoothScroll";
+import { timer } from "./modules/timer";
 
 slider();
 lightbox(80, 80);
@@ -11,3 +12,4 @@ render({
     selectorWrap: '.product__items'
 });
 smoothScroll();
+timer('25 september 2023');
