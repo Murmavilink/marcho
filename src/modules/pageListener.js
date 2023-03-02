@@ -24,7 +24,7 @@ export const pageListener = () => {
         });
         menu(true);
         smoothScroll();
-        timer('25 september 2023');
+        timer();
     } else if(window.location.pathname === '/shop.html') {
         viewGoods();
         render({

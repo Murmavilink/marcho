@@ -12,4 +12,4 @@ render({
     selectorWrap: '.product__items'
 });
 smoothScroll();
-timer('25 september 2023');
+timer();
