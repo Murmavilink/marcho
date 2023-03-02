@@ -25,8 +25,9 @@ export const slider = () => {
 
 
     const logSlider = new Swiper('.partners__list-wrap', {
-      slidesPerView: 3,
+      slidesPerView: 1,
       loop: true,      
+      centeredSlides: true,
       autoplay: {
         delay: 1500,
         disableOnInteraction: false,
@@ -35,6 +36,16 @@ export const slider = () => {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+      },
+
+      breakpoints: {
+        425: {
+          slidesPerView: 2,
+        },      
+        
+        768: {
+          slidesPerView: 3,
+        }  
       }
   
     });
