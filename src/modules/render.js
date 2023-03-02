@@ -1,9 +1,10 @@
 import { getData } from "./getData";
 
-export const render = ({display, stack, selectorWrap, productView}) => {
+export const render = ({display, stack, selectorWrap, productView, sordetData}) => {
     const goodsWrap = document.querySelector(selectorWrap);
 
-    // console.log(display, stack, selectorWrap, productView);
+    // console.log(selectorWrap, sordetData);
+
     const renderGoods = (data) => {
         goodsWrap.innerHTML = '';
 
@@ -64,6 +65,8 @@ export const render = ({display, stack, selectorWrap, productView}) => {
                 product.classList.toggle('product-item--list');
             });
         };
+
+        if(sordetData) renderGoods(sliceArray(sordetData, stack));
 
         if(display === 'main' || display === 'shop') renderGoods(sliceArray(data, stack));
     

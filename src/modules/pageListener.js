@@ -7,7 +7,7 @@ import { render } from "./render";
 import { viewGoods } from "./filter";
 import { smoothScroll } from './smoothScroll';
 import { timer } from './timer';
-
+import { search } from './filter';
 
 export const pageListener = () => {
   const swup = new Swup();
@@ -33,6 +33,7 @@ export const pageListener = () => {
             selectorWrap: '.shop-content__inner'
         });
         menu(true);
+        search();
     } else {
       location.reload();
     }

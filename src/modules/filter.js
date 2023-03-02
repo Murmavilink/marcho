@@ -1,3 +1,4 @@
+import { getData } from "./getData";
 import { render } from "./render";
 
 export const viewGoods = () => {
@@ -21,4 +22,32 @@ export const viewGoods = () => {
         handlerView('product-item--list');
     });
 
+};
+
+
+export const search = () => {
+    const formSearch = document.querySelector('.filter-search__form');
+    
+    formSearch.addEventListener('input', (e) => {
+        e.preventDefault();
+
+        getData().then(data => {
+            let sordetData;
+
+            sordetData = data.filter(item => {
+                return item.name.toLowerCase().includes(e.target.value.toLowerCase());
+            });
+
+            render({
+                stack: 10,
+                selectorWrap: '.shop-content__inner',
+                sordetData,
+            });
+        });
+
+    });
+
+    formSearch.addEventListener('click', (e) => {
+        e.preventDefault();
+    });
 };
