@@ -1115,11 +1115,20 @@ footer {
   padding-top: 75px
 }
 
-.partners__list {
-  height: 170px;
+.partners__list-wrap {
+  padding: 30px 0;
+}
+
+.partners__list-wrap .swiper-button-next:after, 
+.partners__list-wrap .swiper-button-prev:after {
+  font-size: 20px;
+  color: #000;
+}
+
+.partners__item {
   display: flex;
-  justify-content: space-between;
-  align-items: center
+  justify-content: center;
+  align-items: center;
 }
 
 .top-slider {
