@@ -3,6 +3,7 @@ import { getData } from "./getData";
 export const render = ({display, stack, selectorWrap, productView}) => {
     const goodsWrap = document.querySelector(selectorWrap);
 
+    // console.log(display, stack, selectorWrap, productView);
     const renderGoods = (data) => {
         goodsWrap.innerHTML = '';
 
@@ -64,20 +65,10 @@ export const render = ({display, stack, selectorWrap, productView}) => {
             });
         };
 
-
-        if(display === 'main') {
-            renderGoods(sliceArray(data, stack));
-        } else if(display === 'shop') {
-            renderGoods(sliceArray(data, stack));
-        }
+        if(display === 'main' || display === 'shop') renderGoods(sliceArray(data, stack));
     
+        if(productView === 'product-item--list' || productView === 'product-item--grid') productСhanges();
         
-        if(productView === 'product-item--list') {
-            productСhanges();
-        } else if(productView === 'product-item--grid') {
-            productСhanges();
-        }
-
     });
 
 };
