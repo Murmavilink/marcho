@@ -6,6 +6,8 @@ import { lightbox } from './lightbox';
 import { render } from "./render";
 import { viewGoods } from "./filter";
 import { smoothScroll } from './smoothScroll';
+import { timer } from './timer';
+
 
 export const pageListener = () => {
   const swup = new Swup();
@@ -22,6 +24,7 @@ export const pageListener = () => {
         });
         menu(true);
         smoothScroll();
+        timer('25 september 2023');
     } else if(window.location.pathname === '/shop.html') {
         viewGoods();
         render({
