@@ -8,6 +8,9 @@ import { viewGoods } from "./filter";
 import { smoothScroll } from './smoothScroll';
 import { timer } from './timer';
 import { search } from './filter';
+import { pagination } from './pagination';
+
+
 
 export const pageListener = () => {
   const swup = new Swup();
@@ -34,6 +37,7 @@ export const pageListener = () => {
         });
         menu(true);
         search();
+        pagination();
     } else {
       location.reload();
     }
