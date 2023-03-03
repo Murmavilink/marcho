@@ -25,28 +25,31 @@ export const viewGoods = () => {
 };
 
 
-export const search = () => {
+export const search = async () => {
     const formSearch = document.querySelector('.filter-search__form');
-    
+    const goods = await getData();
+
+
     formSearch.addEventListener('input', (e) => {
         e.preventDefault();
 
-        getData().then(data => {
-            let sordetData;
+        let sordetData;
 
-            sordetData = data.filter(item => {
-                return item.name.toLowerCase().includes(e.target.value.toLowerCase());
-            });
+        sordetData = goods.filter(item => {
+            const productName = item.name.toLowerCase().includes(e.target.value.toLowerCase());
+            const productCat = item.category.toLowerCase().includes(e.target.value.toLowerCase());
 
-            render({
-                stack: 10,
-                selectorWrap: '.shop-content__inner',
-                sordetData,
-            });
+            if(productName) return productName;
+            if(productCat) return productCat;
         });
 
+        render({
+            selectorWrap: '.shop-content__inner',
+            sordetData,
+        });
     });
 
+    
     formSearch.addEventListener('click', (e) => {
         e.preventDefault();
     });
