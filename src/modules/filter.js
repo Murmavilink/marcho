@@ -2,11 +2,24 @@ import { getData } from "./getData";
 import { render } from "./render";
 
 
+const buttonGrid = document.querySelector('.button-grid');
+const buttonList = document.querySelector('.button-list');
+
+
+const switchingByStandard = () => {
+    buttonGrid.classList.add('shop-content__filter-btn--active');
+    buttonGrid.disabled = true;
+
+    buttonList.classList.remove('shop-content__filter-btn--active');
+    buttonList.disabled = false;
+};
+
+
+
 export const filter = async () => {
     const goods = await getData();
    
     let sordetData = goods;
-
 
     const search = () => {
         const formSearch = document.querySelector('.filter-search__form');
@@ -23,7 +36,8 @@ export const filter = async () => {
                 if (productCat) return productCat;
             });
     
-            render({ selectorWrap: '.shop-content__inner', sordetData});
+            switchingByStandard();
+            render({ selectorWrap: '.shop-content__inner', sordetData });
         });
     };
 
@@ -52,11 +66,11 @@ export const filter = async () => {
             }
             
             if(!formPriceMin.value  && !formPriceMax.value) {
-                // if(!sordetData[0]) sordetData = goods;
                 sordetData = goods;
                 render({ selectorWrap: '.shop-content__inner', sordetData});
             }
 
+            switchingByStandard();
             addZero();
         });
 
@@ -71,7 +85,8 @@ export const filter = async () => {
 
             if(!sordetData[0]) sordetData = goods;
             
-           render({ selectorWrap: '.shop-content__inner', sordetData });
+            switchingByStandard();
+            render({ selectorWrap: '.shop-content__inner', sordetData });
         });
     
     };
