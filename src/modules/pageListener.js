@@ -4,12 +4,12 @@ import { menu } from './menu';
 import { slider } from "./slider";
 import { lightbox } from './lightbox';
 import { render } from "./render";
-import { viewGoods } from "./filter";
+import { viewGoods } from './viewGoods';
 import { smoothScroll } from './smoothScroll';
 import { timer } from './timer';
 import { search } from './filter';
 import { pagination } from './pagination';
-
+import { price } from './filter';
 
 
 export const pageListener = () => {
@@ -18,26 +18,19 @@ export const pageListener = () => {
   swup.on('contentReplaced', () => {
 
     if(window.location.pathname === '/index.html') {
+        menu(true);  
         slider();
         lightbox();
-        render({
-            display: 'main', 
-            stack: 6, 
-            selectorWrap: '.product__items'
-        });
-        menu(true);
+        render({display: 'main', stack: 6, selectorWrap: '.product__items'});
         smoothScroll();
         timer();
     } else if(window.location.pathname === '/shop.html') {
-        viewGoods();
-        render({
-            display: 'shop', 
-            stack: 10, 
-            selectorWrap: '.shop-content__inner'
-        });
+        render({display: 'shop', stack: 10, selectorWrap: '.shop-content__inner'});
         menu(true);
+        viewGoods();
         search();
         pagination();
+        price();
     } else {
       location.reload();
     }
