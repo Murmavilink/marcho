@@ -19,11 +19,6 @@ export const pagination = async () => {
     };
 
     
-    const sliceArray = (array, start, end) => {
-        return array.slice(start, end);
-    };
-
-
     const handlerClassItems = (index) => {
         const paginatioItems = document.querySelectorAll('.pagination__link');
 
@@ -38,8 +33,7 @@ export const pagination = async () => {
 
         const start = stackPage * pageNum;
         const end = start + stackPage;
-
-        const paginatedData = sliceArray(data, start, end);
+        const paginatedData = data.slice(start, end);
 
         render({ selectorWrap: '.shop-content__inner', paginatedData });
         viewСheck();
