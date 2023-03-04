@@ -2,10 +2,8 @@ import { getData } from "./getData";
 
 export const render = async ({ display, stack, selectorWrap, productView, sordetData, paginatedData }) => {
     const goodsWrap = document.querySelector(selectorWrap);
-
     const goods = await getData();
 
-    // console.log(selectorWrap, paginatedData);
 
     const renderGoods = (data) => {
         goodsWrap.innerHTML = '';
@@ -58,24 +56,20 @@ export const render = async ({ display, stack, selectorWrap, productView, sordet
     };
 
 
-    const productСhanges = () => {
+    const changeProductView = () => {
         const goodsElements = document.querySelectorAll('.product-item');
 
-        goodsWrap.classList.toggle('shop-content__nogrid');
-
-        goodsElements.forEach(product => {
-            product.classList.toggle('product-item--list');
-        });
+        goodsElements.forEach(product => product.classList.toggle('product-item--list'));
     };
 
 
     if (paginatedData) renderGoods(paginatedData);
 
-    if (sordetData) renderGoods(sliceArray(sordetData, stack));
+    if (sordetData) renderGoods(sordetData);
 
     if (display === 'main' || display === 'shop') renderGoods(sliceArray(goods, stack));
 
-    if (productView === 'product-item--list' || productView === 'product-item--grid') productСhanges();
+    if (productView === 'product-item--list' || productView === 'product-item--grid') changeProductView();
 
 
 };

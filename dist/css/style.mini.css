@@ -2556,13 +2556,14 @@ html.is-animating .transition-fade {
   .shop-content__inner {
     display: grid;
     grid-gap: 30px;
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(3, 1fr);
+    overflow: auto;
   }
 
-  .shop-content__nogrid {
+  /* .shop-content__nogrid {
     overflow: auto;
     grid-template-columns: repeat(1, 1fr);
-  }
+  } */
 
   .product-slide__thumb {
     display: none
@@ -2632,10 +2633,6 @@ html.is-animating .transition-fade {
 @media (max-width:860px) {
   .shop-content__inner {
     grid-template-columns: repeat(2, 1fr)
-  }
-
-  .shop-content__nogrid {
-    grid-template-columns: repeat(1, 1fr)
   }
 
   .related__items {
