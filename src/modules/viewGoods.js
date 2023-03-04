@@ -1,17 +1,15 @@
-import { render } from "./render";
+import { changeView } from './helpers';
 
-export const viewGoods = () => {
+export const viewGoods = (statusSwitching) => {
     const buttonGrid = document.querySelector('.button-grid');
     const buttonList = document.querySelector('.button-list');
 
 
-    const handlerView = (view) => {
+    const handlerView = () => {
         buttonGrid.classList.toggle('shop-content__filter-btn--active');
         buttonList.classList.toggle('shop-content__filter-btn--active');
-        render({
-            selectorWrap: '.shop-content__inner',
-            productView: view
-        });
+
+        changeView();
     };
 
 
@@ -21,13 +19,21 @@ export const viewGoods = () => {
     };
 
 
-    buttonGrid.addEventListener('click', () => {
-        handlerView('product-item--grid');
-        disabledBtn(true, false);
-    });
+    if (statusSwitching) {
+        buttonGrid.classList.add('shop-content__filter-btn--active');
+        buttonList.classList.remove('shop-content__filter-btn--active');
 
-    buttonList.addEventListener('click', () => {
-        handlerView('product-item--list');
-        disabledBtn(false, true);
-    });
+        disabledBtn(true, false);
+    } else {
+        buttonGrid.addEventListener('click', () => {
+            handlerView();
+            disabledBtn(true, false);
+        });
+
+        buttonList.addEventListener('click', () => {
+            handlerView();
+            disabledBtn(false, true);
+        });
+    }
+
 };

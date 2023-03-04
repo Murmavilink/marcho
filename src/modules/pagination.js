@@ -1,5 +1,6 @@
 import { getData } from "./getData";
 import { render } from "./render";
+import { changeView } from './helpers';
 
 
 export const pagination = async () => {
@@ -13,12 +14,10 @@ export const pagination = async () => {
 
     
     const viewСheck = () => {
-        if(document.querySelector('.button-list').classList.contains('shop-content__filter-btn--active')) {
-            render({selectorWrap: '.shop-content__inner', productView: 'product-item--list'});
-        }
+        if(document.querySelector('.button-list').classList.contains('shop-content__filter-btn--active')) changeView();
     };
 
-    
+
     const handlerClassItems = (index) => {
         const paginatioItems = document.querySelectorAll('.pagination__link');
 
