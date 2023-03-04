@@ -7,9 +7,8 @@ import { render } from "./render";
 import { viewGoods } from './viewGoods';
 import { smoothScroll } from './smoothScroll';
 import { timer } from './timer';
-import { search } from './filter';
 import { pagination } from './pagination';
-import { price } from './filter';
+import { filter } from "./filter";
 
 
 export const pageListener = () => {
@@ -28,9 +27,8 @@ export const pageListener = () => {
         render({display: 'shop', stack: 10, selectorWrap: '.shop-content__inner'});
         menu(true);
         viewGoods();
-        search();
         pagination();
-        price();
+        filter();
     } else {
       location.reload();
     }

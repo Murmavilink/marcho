@@ -1,8 +1,7 @@
 import { render } from "./modules/render";
 import { viewGoods } from "./modules/viewGoods";
-import { search } from "./modules/filter";
 import { pagination } from './modules/pagination';
-import { price } from "./modules/filter";
+import { filter } from "./modules/filter";
 
 
 render({
@@ -11,6 +10,5 @@ render({
     selectorWrap: '.shop-content__inner'
 });
 viewGoods();
-search();
 pagination();
-price();
+filter();
