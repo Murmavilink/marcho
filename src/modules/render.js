@@ -51,11 +51,6 @@ export const render = async ({ display, stack, selectorWrap, productView, sordet
     };
     
 
-    const sliceArray = (array, stack) => {
-        return array.slice(0, stack);
-    };
-
-
     const changeProductView = () => {
         const goodsElements = document.querySelectorAll('.product-item');
 
@@ -67,7 +62,7 @@ export const render = async ({ display, stack, selectorWrap, productView, sordet
 
     if (sordetData) renderGoods(sordetData);
 
-    if (display === 'main' || display === 'shop') renderGoods(sliceArray(goods, stack));
+    if (display === 'main' || display === 'shop') renderGoods( goods.slice(0, stack) );
 
     if (productView === 'product-item--list' || productView === 'product-item--grid') changeProductView();
 
