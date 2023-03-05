@@ -36,6 +36,9 @@ export const filter = async () => {
         const minElement = formPrice.querySelector('.filter-price__from');
         const maxElement = formPrice.querySelector('.filter-price__to');
 
+        let minValue;
+        let maxValue;
+
 
         const addZero = () => {
             if (!minElement.textContent) minElement.textContent = 0;
@@ -43,13 +46,25 @@ export const filter = async () => {
         };
 
 
+        const formattingValue = (value) => {
+            return value.toLocaleString("ru");
+        };
+
+
+        const removeSpaces = (value) => {
+            return value.replace(/\s+/g, '');
+        };
+
+
         formPrice.addEventListener('input', (e) => {
             e.preventDefault();
 
             if (e.target.id === 'min') {
-                minElement.textContent = e.target.value;
+                minValue = removeSpaces(e.target.value);
+                minElement.textContent = formattingValue(+minValue);
             } else if (e.target.id === 'max') {
-                maxElement.textContent = e.target.value;
+                maxValue = removeSpaces(e.target.value);
+                maxElement.textContent = formattingValue(+maxValue);
             }
 
             if (!formPriceMin.value && !formPriceMax.value) {
@@ -66,8 +81,7 @@ export const filter = async () => {
             e.preventDefault();
 
             sordetData = sordetData.filter(item => {
-                if (+item.price.replace(/\s+/g, '') >= +formPriceMin.value.replace(/\s+/g, '') &&
-                    +item.price.replace(/\s+/g, '') <= +formPriceMax.value.replace(/\s+/g, '')) return item;
+                if (+removeSpaces(item.price) >= minValue && +removeSpaces(item.price) <= maxValue) return item;
             });
 
             if (!sordetData[0]) sordetData = goods;
