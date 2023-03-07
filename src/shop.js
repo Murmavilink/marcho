@@ -2,7 +2,7 @@ import { render } from "./modules/render";
 import { viewGoods } from "./modules/viewGoods";
 import { pagination } from './modules/pagination';
 import { filter } from "./modules/filter";
-
+import { renderFilter } from "./modules/renderFilter";
 
 render({
     display: 'shop', 
@@ -12,3 +12,4 @@ render({
 viewGoods();
 pagination();
 filter();
+renderFilter();

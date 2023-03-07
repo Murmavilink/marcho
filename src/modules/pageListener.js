@@ -9,6 +9,8 @@ import { smoothScroll } from './smoothScroll';
 import { timer } from './timer';
 import { pagination } from './pagination';
 import { filter } from "./filter";
+import { renderFilter } from "./renderFilter";
+
 
 
 export const pageListener = () => {
@@ -29,6 +31,7 @@ export const pageListener = () => {
         viewGoods();
         pagination();
         filter();
+        renderFilter();
     } else {
       location.reload();
     }
