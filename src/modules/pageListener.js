@@ -10,7 +10,7 @@ import { timer } from './timer';
 import { pagination } from './pagination';
 import { filter } from "./filter";
 import { renderFilter } from "./renderFilter";
-
+import { productClick } from './helpers';
 
 
 export const pageListener = () => {
@@ -25,6 +25,7 @@ export const pageListener = () => {
         render({display: 'main', stack: 6, selectorWrap: '.product__items'});
         smoothScroll();
         timer();
+        productClick('.product__items');
     } else if(window.location.pathname === '/shop.html') {
         render({display: 'shop', stack: 10, selectorWrap: '.shop-content__inner'});
         menu(true);
@@ -32,6 +33,7 @@ export const pageListener = () => {
         pagination();
         filter();
         renderFilter();
+        productClick('.shop-content__inner');
     }
 
   });

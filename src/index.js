@@ -3,6 +3,8 @@ import { lightbox } from "./modules/lightbox";
 import { render } from "./modules/render";
 import { smoothScroll } from "./modules/smoothScroll";
 import { timer } from "./modules/timer";
+import { productClick } from './modules/helpers';
+
 
 slider();
 lightbox(80, 80);
@@ -13,3 +15,4 @@ render({
 });
 smoothScroll();
 timer();
+productClick('.product__items');
