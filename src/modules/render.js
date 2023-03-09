@@ -16,7 +16,7 @@ export const render = async ({ display, stack, selectorWrap, sordetData, paginat
                     ${item.discount ? `<div class="product-item__discount">${item.discount}</div>` : ''}
                     <img class="product-item__images" src="${Array.isArray(item.images) ? item.images[0] : item.images}" alt="product">
                         <div class="product-item__link-box">    
-                            <a class="product-item__link" href="#">
+                            <a class="product-item__link" href="product.html">
                                 <svg width="19px" height="20px">
                                     <path fill-rule="evenodd" fill="rgb(41, 40, 45)" d="M18.709,18.219 L14.028,13.269 C15.231,11.813 15.891,9.982 15.891,8.075 C15.891,3.622 12.328,-0.002 7.947,-0.002 C3.568,-0.002 0.005,3.622 0.005,8.075 C0.005,12.529 3.568,16.153 7.947,16.153 C9.591,16.153 11.160,15.649 12.498,14.690 L17.216,19.680 C17.414,19.890 17.678,20.004 17.964,20.004 C18.232,20.004 18.486,19.899 18.680,19.710 C19.093,19.307 19.105,18.639 18.709,18.219 L18.709,18.219 ZM7.947,2.106 C11.185,2.106 13.819,4.785 13.819,8.075 C13.819,11.367 11.185,14.046 7.947,14.046 C4.711,14.046 2.078,11.367 2.078,8.075 C2.078,4.785 4.711,2.106 7.947,2.106 L7.947,2.106 Z"></path>
                                 </svg>

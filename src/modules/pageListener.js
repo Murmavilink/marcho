@@ -32,8 +32,6 @@ export const pageListener = () => {
         pagination();
         filter();
         renderFilter();
-    } else {
-      location.reload();
     }
 
   });

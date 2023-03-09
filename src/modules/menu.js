@@ -1,4 +1,4 @@
-const links = document.querySelectorAll('.menu__list-link');
+const links = [...document.querySelectorAll('.menu__list-link'), ...document.querySelectorAll('.product-item__link')];
 
 
 export const menu = (redirect = false) => {
