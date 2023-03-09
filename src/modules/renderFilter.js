@@ -49,7 +49,7 @@ export const renderFilter = async () => {
                     <label class="filter-popular__label">
                         <input class="filter-popular__input" type="checkbox">
                         <span class="filter-popular__checkbox">
-                            ${item === 'Womens' ? 'Женский': 'Мужской'}
+                            ${item}
                         </span>
                     </label> `);
                 }
