@@ -93,8 +93,44 @@ export const filter = async () => {
     };
 
 
+    const filterCheckbox = (selectorForm, selectorInput, selectorText, selectorLabel, property) => {
+        const filterWrap = document.getElementById(selectorForm);
+        let sordetDataCheckbox = [];
+
+
+        filterWrap.addEventListener('change', (e) => {
+            const checkedInput = e.target.closest(selectorLabel).querySelector(selectorInput);
+            const checkedText = checkedInput.parentNode.querySelector(selectorText).textContent.trim();
+
+
+            if (checkedInput.checked) {
+                goods.forEach(item => {
+                    if (item[property] === checkedText) {
+                        sordetDataCheckbox.push(item);
+                    }
+                });
+            } else {
+                sordetDataCheckbox.forEach((item, index) => {
+                    if (item[property] == checkedText) {
+                        delete sordetDataCheckbox[index];
+                    }
+                });
+            }
+
+
+            viewGoods(true);
+            render({ selectorWrap: '.shop-content__inner', sordetData: sordetDataCheckbox });
+            if(document.querySelector('.shop-content__inner').childElementCount === 0) render({ selectorWrap: '.shop-content__inner', sordetData });
+            
+        });
+    };
+
+
     search();
     price();
+    filterCheckbox('filter-size', '.filter-size__input', '.filter-size__text', '.filter-size__label', 'size');
+    filterCheckbox('filter-category', '.filter-category__input', '.filter-category__checkbox', '.filter-category__label', 'category');
+    filterCheckbox('filter-gender', '.filter-popular__input', '.filter-popular__checkbox', '.filter-popular__label', 'gender');
 };
 
 
