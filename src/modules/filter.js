@@ -23,8 +23,15 @@ export const filter = async () => {
                 if (productCat) return productCat;
             });
 
-            viewGoods(true);
-            render({ selectorWrap: '.shop-content__inner', sordetData });
+
+            if (!e.target.value) {
+                sordetData = goods;
+                render({ selectorWrap: '.shop-content__inner', stack: 10, sordetData });
+            } else {
+                viewGoods(true);
+                render({ selectorWrap: '.shop-content__inner', sordetData });
+            }
+            
         });
     };
 
@@ -69,7 +76,7 @@ export const filter = async () => {
 
             if (!formPriceMin.value && !formPriceMax.value) {
                 sordetData = goods;
-                render({ selectorWrap: '.shop-content__inner', sordetData });
+                render({ selectorWrap: '.shop-content__inner', stack: 10, sordetData });
             }
 
             viewGoods(true);
@@ -87,7 +94,7 @@ export const filter = async () => {
             if (!sordetData[0]) sordetData = goods;
 
             viewGoods(true);
-            render({ selectorWrap: '.shop-content__inner', sordetData });
+            render({ selectorWrap: '.shop-content__inner', stack: 10, sordetData });
         });
 
     };
@@ -120,7 +127,7 @@ export const filter = async () => {
 
             viewGoods(true);
             render({ selectorWrap: '.shop-content__inner', sordetData: sordetDataCheckbox });
-            if(document.querySelector('.shop-content__inner').childElementCount === 0) render({ selectorWrap: '.shop-content__inner', sordetData });
+            if(document.querySelector('.shop-content__inner').childElementCount === 0) render({ selectorWrap: '.shop-content__inner', stack: 10, sordetData });
             
         });
     };

@@ -54,7 +54,7 @@ export const render = async ({ display, stack, selectorWrap, sordetData, paginat
 
     if (paginatedData) renderGoods(paginatedData);
 
-    if (sordetData) renderGoods(sordetData);
+    if (sordetData) renderGoods( sordetData.slice(0, stack) );
 
 
     // получаем данные  
