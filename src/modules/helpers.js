@@ -6,7 +6,6 @@ export const changeView = () => {
 
 
 export const productClick = (selectorWrap) => {
-    console.log('productClick');
     const goodsWrap = document.querySelector(selectorWrap);
 
     goodsWrap.addEventListener('click', (e) => {
