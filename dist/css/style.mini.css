@@ -1671,6 +1671,41 @@ footer {
   cursor: pointer
 }
 
+.product-one__item-num {
+  max-width: 30px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.product-one__counter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 150px;
+  background-color: #f2f2f2;
+  margin-bottom: 15px;
+}
+
+.product-one__control {
+  font-size: 25px;
+  width: 40px;
+  text-align: center;
+  padding: 5px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.product-one__control:hover {
+  background-color: #fe3e57;
+  color: #fff;
+}
+
+.product-one__item-btn {
+  max-width: 150px;
+  width: 100%;
+  margin-left: 0;
+}
+
 .product-info__list {
   margin-bottom: 30px
 }
