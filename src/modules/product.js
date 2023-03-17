@@ -28,7 +28,7 @@ export const product = async () => {
     };
 
 
-    const renderProduct = (product) => {
+    const showProductInfo = (product) => {
         productTitle.textContent = product.name;
         productDiscount.textContent = product.discount;
 
@@ -107,7 +107,7 @@ export const product = async () => {
 
 
     renderSlider(getProduct());
-    renderProduct(getProduct());
+    showProductInfo(getProduct());
     sliderProduct();
     counter();
 };

@@ -87,37 +87,11 @@
                         <div class="product-one__slide product-slide">
 
                             <div class="swiper mySwiper2 thumbs-slider">
-                                <div class="swiper-wrapper thumbs-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                    </div>
-                                </div>
+                                <div class="swiper-wrapper thumbs-wrapper"></div>
                             </div>
 
                             <div class="swiper mySwiper" style="--swiper-navigation-color: #fff;">
-                                <div class="swiper-wrapper slider-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                    </div>
-                                </div>
+                                <div class="swiper-wrapper slider-wrapper"></div>
                             </div>
 
                         </div>
@@ -288,18 +262,10 @@
                 </div>
                 <div class="product-tabs">
                     <div class="product-tabs__top">
-                        <a class="product-tabs__top-item" href="#tab-1">Description</a>
-                        <a class="product-tabs__top-item" href="#tab-2">Additional information</a>
-                        <a class="product-tabs__top-item product-tabs__top-item--active" href="#tab-3">Reviews</a>
+                        <div class="product-tabs__top-item">Отзывы</div>
                     </div>
                     <div class="product-tabs__content">
-                        <div class="product-tabs__content-item" id="tab-1">
-                            content 1
-                        </div>
-                        <div class="product-tabs__content-item" id="tab-2">
-                            content 2
-                        </div>
-                        <div class="product-tabs__content-item product-tabs__content-item--active" id="tab-3">
+                        <div class="product-tabs__content-item product-tabs__content-item--active">
                             <div class="comments">
                                 <img class="comments__img" src="images/avatar/1.jpg" alt="avatar">
                                 <div class="comments__content">
@@ -310,7 +276,7 @@
                                         <p class="comments__content-date">
                                             2 days ago
                                         </p>
-                                        <div class="star comments__content-star" data-rateyo-rating="4"></div>
+                                        <div class="star comments__content-star"></div>
                                     </div>
                                     <p class="comments__content-text">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -333,7 +299,7 @@
                                         <p class="comments__content-date">
                                             2 days ago
                                         </p>
-                                        <div class="star comments__content-star" data-rateyo-rating="4"></div>
+                                        <div class="star comments__content-star"></div>
                                     </div>
                                     <p class="comments__content-text">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -356,7 +322,7 @@
                                         <p class="comments__content-date">
                                             2 days ago
                                         </p>
-                                        <div class="star comments__content-star" data-rateyo-rating="4"></div>
+                                        <div class="star comments__content-star"></div>
                                     </div>
                                     <p class="comments__content-text">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -371,10 +337,10 @@
                             </div>
                             <form class="comments-form" action="#">
                                 <p class="comments-form__title">
-                                    Add your review
+                                    Добавьте свой отзыв
                                 </p>
                                 <div class="comments-form__rating">
-                                    <span class="comments-form__rating-title">Your Rating</span>
+                                    <span class="comments-form__rating-title">Ваш рейтинг</span>
                                     <label class="comments-form__label">
                                         <input class="comments-form__input" type="radio" name="star">
                                         <span class="comments-form__radio">
@@ -522,96 +488,17 @@
                                     </label>
                                 </div>
                                 <div class="comments-form__box-input">
-                                    <input class="comments-form__text-input" type="text" placeholder="Your name">
-                                    <input class="comments-form__text-input" type="text" placeholder="E-mail address">
+                                    <input class="comments-form__text-input" type="text" placeholder="Ваше имя *">
+                                    <input class="comments-form__text-input" type="text" placeholder="E-mail адрес">
                                 </div>
-                                <textarea class="comments-form__textarea" placeholder="Your text here"></textarea>
-                                <button class="comments-form__btn" type="submit">Leave Review</button>
+                                <textarea class="comments-form__textarea" placeholder="Ваше сообщение"></textarea>
+                                <button class="comments-form__btn" type="submit">Оставить отзыв</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="related">
-            <div class="container">
-                <h3 class="title related__title">RELATED PRODUCTS</h3>
-                <div class="related__items">
-
-                    <div class="product-item">
-                        <div class="product-item__img-box">
-                            <img class="product-item__images" src="images/product/1.jpg" alt="product">
-                        </div>
-                        <div class="product-item__wrapper-box">
-                            <div class="product-item__box">
-                                <div class="star" data-rateyo-rating="4"></div>
-                                <h4 class="product-item__title">
-                                    White Polo Men’s T-Shirt
-                                </h4>
-                                <div class="product-item__price">
-                                    <div class="product-item__new-price">$34.00</div>
-                                    <div class="product-item__old-price">$27.00</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-item__img-box">
-                            <img class="product-item__images" src="images/product/2.jpg" alt="product">
-                        </div>
-                        <div class="product-item__wrapper-box">
-                            <div class="product-item__box">
-                                <div class="star" data-rateyo-rating="4"></div>
-                                <h4 class="product-item__title">
-                                    White Polo Men’s T-Shirt
-                                </h4>
-                                <div class="product-item__price">
-                                    <div class="product-item__new-price">$34.00</div>
-                                    <div class="product-item__old-price">$27.00</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-item__img-box">
-                            <img class="product-item__images" src="images/product/3.jpg" alt="product">
-                        </div>
-                        <div class="product-item__wrapper-box">
-                            <div class="product-item__box">
-                                <div class="star" data-rateyo-rating="4"></div>
-                                <h4 class="product-item__title">
-                                    White Polo Men’s T-Shirt
-                                </h4>
-                                <div class="product-item__price">
-                                    <div class="product-item__new-price">$34.00</div>
-                                    <div class="product-item__old-price">$27.00</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <div class="product-item__img-box">
-                            <img class="product-item__images" src="images/product/4.jpg" alt="product">
-                        </div>
-                        <div class="product-item__wrapper-box">
-                            <div class="product-item__box">
-                                <div class="star" data-rateyo-rating="4"></div>
-                                <h4 class="product-item__title">
-                                    White Polo Men’s T-Shirt
-                                </h4>
-                                <div class="product-item__price">
-                                    <div class="product-item__new-price">$34.00</div>
-                                    <div class="product-item__old-price">$27.00</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
 
     </main>
     <footer class="footer">
