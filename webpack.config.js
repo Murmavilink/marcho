@@ -7,6 +7,7 @@ module.exports = {
         index: './index.js',
         shop: './shop.js',
         contacts: './contacts.js',
+        product: './product.js',
     },
     output: {
         filename: 'js/[name].js',

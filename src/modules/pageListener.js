@@ -11,6 +11,7 @@ import { pagination } from './pagination';
 import { filter } from "./filter";
 import { renderFilter } from "./renderFilter";
 import { productClick } from './helpers';
+import { product } from './product';
 
 
 export const pageListener = () => {
@@ -34,6 +35,8 @@ export const pageListener = () => {
         filter();
         renderFilter();
         productClick('.shop-content__inner');
+    } else if(window.location.pathname === '/product.html') {
+      product();
     }
 
   });
