@@ -1852,7 +1852,8 @@ footer {
 }
 
 .product-slide {
-  display: flex
+  display: flex;
+  max-width: 800px;
 }
 
 .product-slide__thumb {
