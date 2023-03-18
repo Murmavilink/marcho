@@ -14,7 +14,7 @@ import { productClick } from './helpers';
 import { product } from './product';
 import { auth } from './auth';
 import { sendForm } from './sendForm';
-
+import { basket } from './basket';
 
 export const pageListener = () => {
   const swup = new Swup();
@@ -30,6 +30,7 @@ export const pageListener = () => {
         timer();
         productClick('.product__items');
         auth();
+        basket();
     } else if(window.location.pathname === '/shop.html') {
         render({display: 'shop', stack: 10, selectorWrap: '.shop-content__inner'});
         menu(true);
@@ -39,12 +40,15 @@ export const pageListener = () => {
         renderFilter();
         productClick('.shop-content__inner');
         auth();
+        basket();
     } else if(window.location.pathname === '/contacts.html') {
       sendForm();
       auth();
+      basket();
     } else if(window.location.pathname === '/product.html') {
       product();
       auth();
+      basket();
     }
 
   });
