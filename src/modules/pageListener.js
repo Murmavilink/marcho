@@ -39,7 +39,7 @@ export const pageListener = () => {
         renderFilter();
         productClick('.shop-content__inner');
         auth();
-    } else if(window.location.pathname === '/contact.html') {
+    } else if(window.location.pathname === '/contacts.html') {
       sendForm();
       auth();
     } else if(window.location.pathname === '/product.html') {

@@ -32,8 +32,8 @@ export const auth = () => {
         authOut.style.display = 'none';
         buttonAuth.style.display = 'block';
 
-        authLogin.value = '';
-        authPassword.value = '';
+        modalAuthLogin.value = '';
+        modalAuthPassword.value = '';
 
         localStorage.removeItem('auth');
     };
