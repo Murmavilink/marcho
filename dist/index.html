@@ -36,9 +36,13 @@
                     </ul>
                 </nav>
                 <div class="user-nav">
-                    <a class="user-nav__link" href="#">
-                        <img class="user-nav__link-img" src="images/icons/user.svg" alt="user icon">
-                    </a>
+                    <div class="auth-wrap">
+                        <p class="auth-username" style="display: none;"></p>
+                        <a class="user-nav__link auth-btn" href="#">
+                            <img class="user-nav__link-img" src="images/icons/user.svg" alt="user icon">
+                        </a>
+                        <button class="auth-out" style="display: none;">Выйти</button>
+                    </div>
                     <a class="user-nav__link" href="#">
                         <img class="user-nav__link-img" src="images/icons/search.svg" alt="user icon">
                     </a>
@@ -56,6 +60,29 @@
     </header>
 
     <main id="swup" class="main transition-fade">
+
+        <div class="modal-auth">
+			<div class="modal-auth__wrap">
+				<button class="modal-auth__close-btn">×</button>
+
+				<form class="modal-auth__form">
+
+					<fieldset class="modal-auth__form-body">
+						<legend class="modal-auth__form-title">Авторизация</legend>
+
+						<label class="modal-auth__form-label">
+							<span>Логин</span> <input class="modal-auth__form-input modal-auth__login" type="text">
+						</label>
+						<label class="modal-auth__form-label">
+							<span>Пароль</span> <input class="modal-auth__form-input modal-auth__password" type="password">
+						</label>
+					</fieldset>
+
+					<button class="modal-auth__form-btn btn" type="submit">Войти</button>
+				</form>
+
+			</div>
+		</div>
 
         <section class="top-slider">
             <div class="container top-slider__container swiper">

@@ -729,6 +729,30 @@ footer {
   padding-left: 25px
 }
 
+.auth-wrap {
+  position: relative;
+  /* padding: 0 25px; */
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  max-width: 200px;
+  margin-right: 25px;
+  text-transform: uppercase;
+}
+
+/* .auth-username {
+  position: absolute;
+  left: 0;
+} */
+
+.auth-out {
+  color: #000;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+}
+
 .user-nav__num {
   position: absolute;
   width: 20px;
@@ -741,6 +765,93 @@ footer {
   line-height: 20px;
   text-align: center;
   color: #fff
+}
+
+.modal-auth,
+.modal-checkout {
+  position: fixed;
+  top: -300%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+.modal-auth__wrap,
+.modal-checkout__wrap {
+  position: absolute;
+  top: -300%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 460px;
+  width: 100%;
+  background-color: #fff;
+  padding: 40px 45px 30px 45px;
+  transition: all 0.8s;
+}
+.modal-auth__close-btn,
+.modal-checkout__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+.modal-auth__form-title,
+.modal-checkout__form-title {
+  font-size: 36px;
+  line-height: 42px;
+}
+.modal-auth__form-body,
+.modal-checkout__form-body {
+  margin-bottom: 25px;
+}
+.modal-auth__form-label,
+.modal-checkout__form-label {
+  display: block;
+  margin: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.modal-auth__form-btn,
+.modal-checkout__form-btn {
+  margin-left: auto;
+  display: block;
+  border: none;
+  background-color: #EA0C0C;
+  color: #fff;
+  font-size: 16px;
+}
+
+.modal-checkout {
+  position: fixed;
+  top: -300%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+.modal-checkout__wrap {
+  position: absolute;
+  top: -300%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 460px;
+  width: 100%;
+  background-color: #fff;
+  padding: 40px 45px 30px 45px;
+  transition: all 0.8s;
+}
+
+.button__out {
+  display: none;
 }
 
 

@@ -12,7 +12,7 @@ import { filter } from "./filter";
 import { renderFilter } from "./renderFilter";
 import { productClick } from './helpers';
 import { product } from './product';
-
+import { auth } from './auth';
 
 export const pageListener = () => {
   const swup = new Swup();
@@ -27,6 +27,7 @@ export const pageListener = () => {
         smoothScroll();
         timer();
         productClick('.product__items');
+        auth();
     } else if(window.location.pathname === '/shop.html') {
         render({display: 'shop', stack: 10, selectorWrap: '.shop-content__inner'});
         menu(true);
@@ -35,8 +36,10 @@ export const pageListener = () => {
         filter();
         renderFilter();
         productClick('.shop-content__inner');
+        auth();
     } else if(window.location.pathname === '/product.html') {
       product();
+      auth();
     }
 
   });
