@@ -13,6 +13,8 @@ import { renderFilter } from "./renderFilter";
 import { productClick } from './helpers';
 import { product } from './product';
 import { auth } from './auth';
+import { sendForm } from './sendForm';
+
 
 export const pageListener = () => {
   const swup = new Swup();
@@ -37,6 +39,9 @@ export const pageListener = () => {
         renderFilter();
         productClick('.shop-content__inner');
         auth();
+    } else if(window.location.pathname === '/contact.html') {
+      sendForm();
+      auth();
     } else if(window.location.pathname === '/product.html') {
       product();
       auth();

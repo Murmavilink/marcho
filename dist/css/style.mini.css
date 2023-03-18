@@ -731,7 +731,6 @@ footer {
 
 .auth-wrap {
   position: relative;
-  /* padding: 0 25px; */
   display: flex;
   align-items: center;
   column-gap: 20px;
@@ -740,10 +739,6 @@ footer {
   text-transform: uppercase;
 }
 
-/* .auth-username {
-  position: absolute;
-  left: 0;
-} */
 
 .auth-out {
   color: #000;
