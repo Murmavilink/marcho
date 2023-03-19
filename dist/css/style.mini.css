@@ -1706,6 +1706,11 @@ footer {
   width: 320px;
 }
 
+.basket-sidebar--active {
+  height: 2800px;
+  overflow-y: auto;
+}
+
 .basket-sidebar__inner {
   position: absolute;
   right: -300%;
