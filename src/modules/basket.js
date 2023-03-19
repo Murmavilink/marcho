@@ -12,11 +12,11 @@ export const basket = (selector) => {
     };
 
 
-    const productQuantityCheck = () => {
-        if(arrayProducts.length === 0) {
-            basketWrap.classList.toggle('basket-sidebar__inner--active');
-        }
-    };
+    // const productQuantityCheck = () => {
+    //     if(arrayProducts.length === 0) {
+    //         basketWrap.classList.toggle('basket-sidebar__inner--active');
+    //     }
+    // };
 
     
     const changeNumberProducts = () => quantityGoodsBasket.textContent = arrayProducts.length;
@@ -30,6 +30,12 @@ export const basket = (selector) => {
         addToLocalStorage();
         renderProductBasket();
         changeNumberProducts();
+
+        if(arrayProducts.length === 0) {
+            basketSidebar.classList.toggle('basket-sidebar--active');
+            basketWrap.classList.toggle('basket-sidebar__inner--active');
+        }
+
     };
 
 
@@ -49,18 +55,31 @@ export const basket = (selector) => {
             `);
         });
 
-        productQuantityCheck();
+        // productQuantityCheck();
     };
 
+    // && basketWrap.classList.contains('basket-sidebar__inner--active')
 
-    const blockHeightCheck = () => {
-        if(basketWrap.scrollHeight > 2500) {
-            basketSidebar.classList.add('basket-sidebar--active');
-        } 
+    // const blockHeightCheck = () => {
+    //     if(basketWrap.scrollHeight > 2500 && basketWrap.classList.contains('basket-sidebar__inner--active')) {
+
+    //         console.log(true);
+            
+    //         basketSidebar.classList.toggle('basket-sidebar--active');
+    //     } 
         
-        else {
-            basketSidebar.style.height = basketWrap.scrollHeight + 'px';
-        }
+    //     else {
+    //         basketSidebar.style.height = basketWrap.scrollHeight + 'px';
+    //     }
+    // };
+
+    const showbasketGoods = () => {
+        
+        // if(arrayProducts.length > 8) {
+            basketSidebar.classList.toggle('basket-sidebar--active');
+            basketWrap.classList.toggle('basket-sidebar__inner--active');
+        // }
+
     };
 
 
@@ -75,7 +94,9 @@ export const basket = (selector) => {
         e.preventDefault();
         
         if(arrayProducts.length > 0) {
-            basketWrap.classList.toggle('basket-sidebar__inner--active');
+            showbasketGoods();
+            // basketWrap.classList.toggle('basket-sidebar__inner--active');
+            // blockHeightCheck();
             // basketSidebar.style.height = basketWrap.scrollHeight + 'px';
         }    
     });
@@ -112,7 +133,7 @@ export const basket = (selector) => {
 
         addToLocalStorage();
         renderProductBasket();
-        blockHeightCheck();
+        // blockHeightCheck();
         changeNumberProducts();
     };
 
@@ -120,6 +141,6 @@ export const basket = (selector) => {
     if(arrayProducts.length > 0) renderProductBasket();
 
     changeNumberProducts();
-    blockHeightCheck();
+    // blockHeightCheck();
 };
 
