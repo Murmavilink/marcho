@@ -1699,6 +1699,31 @@ footer {
   fill: #fe3e57
 }
 
+.basket-sidebar {
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 320px;
+}
+
+.basket-sidebar__inner {
+  position: absolute;
+  right: -300%;
+  width: 320px;
+  background-color: #fff;
+  border: 1px #ccc solid;
+  padding: 40px;
+}
+
+.basket-sidebar__inner--active {
+  right: 0;
+  z-index: 100;
+}
+
+.basket__item {
+  padding: 12px;
+}
+
 .product-page {
   padding: 120px 0 0
 }

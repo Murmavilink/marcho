@@ -9,10 +9,11 @@ export const productClick = (selectorWrap) => {
     const goodsWrap = document.querySelector(selectorWrap);
 
     goodsWrap.addEventListener('click', (e) => {
-        if(e.target.closest('.product-item__link')) {
+        if(e.target.closest('.product-link')) {
             const idProduct = e.target.closest('.product-item').querySelector('.product-item__id').textContent;
 
             sessionStorage.setItem('idProduct', idProduct);
         }
+    
     });
 };

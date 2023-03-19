@@ -30,7 +30,7 @@ export const pageListener = () => {
         timer();
         productClick('.product__items');
         auth();
-        basket();
+        // basket();
     } else if(window.location.pathname === '/shop.html') {
         render({display: 'shop', stack: 10, selectorWrap: '.shop-content__inner'});
         menu(true);
@@ -40,15 +40,15 @@ export const pageListener = () => {
         renderFilter();
         productClick('.shop-content__inner');
         auth();
-        basket();
+        // basket();
     } else if(window.location.pathname === '/contacts.html') {
       sendForm();
       auth();
-      basket();
+      // basket();
     } else if(window.location.pathname === '/product.html') {
       product();
       auth();
-      basket();
+      // basket();
     }
 
   });

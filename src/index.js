@@ -4,7 +4,7 @@ import { render } from "./modules/render";
 import { smoothScroll } from "./modules/smoothScroll";
 import { timer } from "./modules/timer";
 import { productClick } from './modules/helpers';
-
+import { basket } from "./modules/basket";
 
 slider();
 lightbox(80, 80);
@@ -16,3 +16,4 @@ render({
 smoothScroll();
 timer();
 productClick('.product__items');
+basket('.product__items');

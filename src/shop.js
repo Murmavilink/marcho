@@ -4,7 +4,7 @@ import { pagination } from './modules/pagination';
 import { filter } from "./modules/filter";
 import { renderFilter } from "./modules/renderFilter";
 import { productClick } from './modules/helpers';
-
+import { basket } from "./modules/basket";
 
 render({
     display: 'shop', 
@@ -16,3 +16,4 @@ pagination();
 filter();
 renderFilter();
 productClick('.shop-content__inner');
+basket('.shop-content__inner');
