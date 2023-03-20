@@ -763,7 +763,8 @@ footer {
 }
 
 .modal-auth,
-.modal-checkout {
+.modal-checkout,
+.modal-product {
   position: fixed;
   top: -300%;
   left: 0;
@@ -774,10 +775,36 @@ footer {
   background: rgba(0, 0, 0, 0.4);
   z-index: 999;
 }
+
+.modal-product--active {
+  top: 0;
+}
+
+.modal-product__label + .modal-product__label {
+  display: block;
+  margin-top: 15px;
+}
+
+.modal-product__label-text {
+  font-size: 16px;
+  color: #1b1b1b;
+}
+
+.modal-product__input {
+  border: 1px solid #434343;
+  width: 100%;
+}
+
+.modal-product__form-body {
+  padding: 30px;
+}
+
+
 .modal-auth__wrap,
-.modal-checkout__wrap {
+.modal-checkout__wrap, 
+.modal-product__wrap {
   position: absolute;
-  top: -300%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 460px;
@@ -786,8 +813,14 @@ footer {
   padding: 40px 45px 30px 45px;
   transition: all 0.8s;
 }
+
+.modal-product__wrap {
+  max-width: 550px;
+}
+
 .modal-auth__close-btn,
-.modal-checkout__close-btn {
+.modal-checkout__close-btn,
+.modal-product__close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -797,12 +830,14 @@ footer {
   cursor: pointer;
 }
 .modal-auth__form-title,
-.modal-checkout__form-title {
+.modal-checkout__form-title,
+.modal-product__form-title {
   font-size: 36px;
   line-height: 42px;
 }
 .modal-auth__form-body,
-.modal-checkout__form-body {
+.modal-checkout__form-body,
+.modal-product__form-body {
   margin-bottom: 25px;
 }
 .modal-auth__form-label,
@@ -813,13 +848,31 @@ footer {
   justify-content: space-between;
 }
 .modal-auth__form-btn,
-.modal-checkout__form-btn {
+.modal-checkout__form-btn,
+.modal-product__form-btn {
   margin-left: auto;
   display: block;
-  border: none;
+  border: 1px solid transparent;
   background-color: #EA0C0C;
   color: #fff;
   font-size: 16px;
+  padding: 6px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.modal-auth__form-btn:hover,
+.modal-checkout__form-btn:hover,
+.modal-product__form-btn:hover {
+  background-color: #fff;
+  color: #EA0C0C;
+  border-color: #EA0C0C;
+}
+
+.modal-product__count {
+  margin: 10px 0 0;
+  color: #000;
 }
 
 .modal-checkout {
@@ -850,7 +903,7 @@ footer {
 }
 
 
-
+/* 
 .modal {
   padding-top: 100px;
   max-width: 570px;
@@ -908,7 +961,7 @@ footer {
 
 .modal__text {
   margin-bottom: 25px
-}
+} */
 
 
 
@@ -1764,6 +1817,7 @@ footer {
   border-radius: 10px;
   background-color: #f9f9fd;
 }
+
 
 .product-page {
   padding: 120px 0 0
