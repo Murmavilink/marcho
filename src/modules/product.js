@@ -3,6 +3,7 @@ import { getData } from "./getData";
 
 
 export const product = async () => {
+    const productPage = document.querySelector('.product-page');
     const productTitle = document.querySelector('.product-one__title');
     const thumbsWrapper = document.querySelector('.thumbs-wrapper');
     const sliderWrapper = document.querySelector('.slider-wrapper');
@@ -13,9 +14,18 @@ export const product = async () => {
     const counterNum = document.querySelector('.product-one__item-num');
     const productId = document.getElementById('product-sku');
     const productCategory = document.getElementById('product-category');
-
+    
     const goods = await getData();
     const idProduct = sessionStorage.getItem('idProduct');
+
+
+    if(!idProduct) {
+      productPage.style.cssText = 'text-align: center; font-size: 50px; color: #000; padding: 150px;';
+      productPage.textContent = 'No Product';
+      
+      return;
+    }
+
 
     const getProduct = () => {
         let product;
