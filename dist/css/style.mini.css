@@ -1124,7 +1124,7 @@ footer {
   bottom: 50px;
   background-color: #fff;
   display: inline-block;
-  width: 220px;
+  width: 150px;
   height: 50px;
   margin: 0 auto;
   box-shadow: 0 5px 30px 0 rgba(152, 152, 152, .2);
@@ -1133,6 +1133,16 @@ footer {
   align-items: center;
   justify-content: space-around;
   transform: translateX(300%)
+}
+
+.product-item__link-box::after {
+  content: '';
+  height: 60%;
+  width: .2px;
+  background-color: #626161;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .product-item__link--line::before,
