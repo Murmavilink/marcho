@@ -1709,6 +1709,7 @@ footer {
 .basket-sidebar--active {
   height: 2800px;
   overflow-y: auto;
+  border: 1px #ccc solid;
 }
 
 .basket-sidebar__inner {
@@ -1716,7 +1717,6 @@ footer {
   right: -300%;
   width: 320px;
   background-color: #fff;
-  border: 1px #ccc solid;
   padding: 40px;
 }
 
@@ -1725,8 +1725,44 @@ footer {
   z-index: 100;
 }
 
-.basket__item {
+.basket-sidebar__item {
   padding: 12px;
+}
+
+.basket-sidebar__title {
+  margin: 10px 0;
+}
+
+.basket-sidebar__btn {
+  background-color: #fe3e57;
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .3s; 
+}
+
+.basket-sidebar__btn:hover {
+  background-color: #fff;
+  color: #fe3e57;
+  border-color: #fe3e57;
+}
+
+.basket-sidebar::-webkit-scrollbar {
+  width: 2px;
+  background-color: #f9f9fd;
+}
+
+.basket-sidebar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #5d5d5d;
+}
+
+.basket-sidebar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd;
 }
 
 .product-page {
