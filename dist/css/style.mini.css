@@ -829,12 +829,18 @@ footer {
   font-size: 40px;
   cursor: pointer;
 }
+
 .modal-auth__form-title,
-.modal-checkout__form-title,
-.modal-product__form-title {
+.modal-checkout__form-title {
   font-size: 36px;
   line-height: 42px;
 }
+
+.modal-product__form-title {
+  font-size: 18px;
+  color: #000;
+}
+
 .modal-auth__form-body,
 .modal-checkout__form-body,
 .modal-product__form-body {

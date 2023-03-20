@@ -15,6 +15,8 @@ import { product } from './product';
 import { auth } from './auth';
 import { sendForm } from './sendForm';
 import { basket } from './basket';
+import { modalProduct } from './modalProduct';
+
 
 export const pageListener = () => {
   const swup = new Swup();
@@ -47,7 +49,8 @@ export const pageListener = () => {
     } else if(window.location.pathname === '/product.html') {
       product();
       auth();
-      // basket();
+      modalProduct();
+      basket();
     }
 
   });
