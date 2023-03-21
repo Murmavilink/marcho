@@ -1778,7 +1778,6 @@ footer {
 .basket-sidebar--active {
   height: 2800px;
   overflow-y: auto;
-  border: 1px #ccc solid;
 }
 
 .basket-sidebar__inner {
@@ -1792,6 +1791,7 @@ footer {
 .basket-sidebar__inner--active {
   right: 0;
   z-index: 100;
+  border: 1px #ccc solid;
 }
 
 .basket-sidebar__item {

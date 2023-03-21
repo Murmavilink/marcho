@@ -1,34 +1,34 @@
 export const basket = (selector) => {
     const goodsWrap = document.querySelector(selector);
-    const arrayProducts = JSON.parse(localStorage.getItem('products')) || [];
     const cart = document.querySelector('.cart');
     const quantityGoodsBasket = document.querySelector('.user-nav__num');
     const basketSidebar = document.querySelector('.basket-sidebar');
-    const basketWrap = document.querySelector('.basket-sidebar__inner');
-    
+    const basketWrap = document.querySelector('.basket-sidebar__inner');    
+    const productArray = JSON.parse(localStorage.getItem('goods')) || [];
 
-    const addToLocalStorage = () => localStorage.setItem('products', JSON.stringify(arrayProducts));
 
-    const changeNumberProducts = () => quantityGoodsBasket.textContent = arrayProducts.length;
+    const addToLocalStorage = () => localStorage.setItem('goods', JSON.stringify(productArray));
+
+    const changeNumberProducts = () => quantityGoodsBasket.textContent = productArray.length;
 
     
     const removeProduct = (id) => {
-        arrayProducts.forEach((product, index) => {
-            if(product.id == id) arrayProducts.splice(index, 1);
+        productArray.forEach((product, index) => {
+            if(product.id == id) productArray.splice(index, 1);
         });
 
         addToLocalStorage();
         renderProductBasket();
         changeNumberProducts();
 
-        if(arrayProducts.length === 0) toggleBasketBlocks();
+        if(productArray.length === 0) toggleBasketBlocks();
     };
 
 
     const renderProductBasket = () => {
         basketWrap.innerHTML = '';
 
-        arrayProducts.forEach(productItem => {
+        productArray.forEach(productItem => {
             basketWrap.insertAdjacentHTML('beforeend', `
             <article class="basket-sidebar__item">
                 <img class="basket-sidebar__image" src="${productItem.image}">
@@ -50,9 +50,9 @@ export const basket = (selector) => {
 
 
     const complianceCheck = (productObj) => {
-        arrayProducts.forEach((product, index) => {
+        productArray.forEach((product, index) => {
             if (product.id == productObj.id) {
-                arrayProducts.splice(index, 1);
+                productArray.splice(index, 1);
             }
         });
     };
@@ -69,7 +69,7 @@ export const basket = (selector) => {
 
         complianceCheck(productObj);
 
-        arrayProducts.push(productObj);
+        productArray.push(productObj);
 
         addToLocalStorage();
         renderProductBasket();
@@ -79,7 +79,7 @@ export const basket = (selector) => {
 
     try {
         goodsWrap.addEventListener('click', (e) => {
-            if(e.target.closest('.product-item')) {
+            if(e.target.closest('.basket-link')) {
                 handlerProduct(e.target.closest('.product-item'));
             }
         });
@@ -92,13 +92,13 @@ export const basket = (selector) => {
     cart.addEventListener('click', (e) => {
         e.preventDefault();
         
-        if(arrayProducts.length > 0) toggleBasketBlocks(); 
+        if(productArray.length > 0) toggleBasketBlocks(); 
     });
 
 
     basketWrap.addEventListener('click', (e) => {
         if(e.target.classList.contains('button-reomve')) {
-            const id = e.target.closest('.basket__item').querySelector('.basket__id').textContent;
+            const id = e.target.closest('.basket-sidebar__item').querySelector('.basket-sidebar__id').textContent;
 
             removeProduct(id);
         } else if(e.target.classList.contains('button-look')) {
@@ -106,13 +106,12 @@ export const basket = (selector) => {
 
             sessionStorage.setItem('idProduct', id);
 
-            console.log(window.location);
             window.location.href = '/product.html';
         }
     });
 
 
-    if(arrayProducts.length > 0) renderProductBasket();
+    if(productArray.length > 0) renderProductBasket();
 
     changeNumberProducts();
 };
