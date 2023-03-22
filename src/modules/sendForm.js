@@ -1,6 +1,5 @@
 export const sendForm = ({idForm}) => {
-    const form = document.querySelector(idForm);
-    const textarea = form.querySelector('textarea');
+    const form = document.getElementById(idForm);
     const statusBlock = document.createElement('h3');
     const loadText = 'Загрузка...';
     const errorText = 'Ошибка...';
@@ -26,7 +25,7 @@ export const sendForm = ({idForm}) => {
 
 
     const submitForm = () => {
-        const formElements = [...form.querySelectorAll('input'), textarea];
+        const formElements = form.querySelectorAll('.entry-field');
         const formData = new FormData(form);
         const formBody = {};
 
@@ -35,8 +34,7 @@ export const sendForm = ({idForm}) => {
         
         formData.forEach((val, key) => formBody[key] = val);
 
-        formBody['textarea'] = textarea.value;
-
+        console.log(formBody);
 
         sendData(formBody).then(data => {
             statusBlock.textContent = succesText;
