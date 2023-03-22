@@ -1,4 +1,4 @@
-export const sendForm = ({idForm}) => {
+export const sendForm = ({idForm, idProductСount}) => {
     const form = document.getElementById(idForm);
     const statusBlock = document.createElement('h3');
     const loadText = 'Загрузка...';
@@ -33,9 +33,9 @@ export const sendForm = ({idForm}) => {
         statusBlock.textContent = loadText;
         
         formData.forEach((val, key) => formBody[key] = val);
-
-        console.log(formBody);
-
+    
+        if(idProductСount) formBody.quantity = document.getElementById(idProductСount).textContent;
+        
         sendData(formBody).then(data => {
             statusBlock.textContent = succesText;
 

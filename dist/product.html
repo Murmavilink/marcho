@@ -90,27 +90,27 @@
 			<div class="modal-product__wrap">
 				<button class="modal-product__close-btn">×</button>
 
-				<form class="modal-product__form">
+				<form id="product-form" class="modal-product__form">
 
 					<fieldset class="modal-product__form-body">
 						<legend class="modal-product__form-title">Продукт</legend>
 
                         <label class="modal-product__label">
                             <span class="modal-product__label-text">Куда доставить</span>
-                            <input class="modal-product__input" type="text">
+                            <input class="modal-product__input entry-field" type="text" name="deliver">
                         </label>
 
                         <label class="modal-product__label">
                             <span class="modal-product__label-text">Кому</span>
-                            <input class="modal-product__input" type="text">
+                            <input class="modal-product__input entry-field" type="text" name="recipient">
                         </label>
                         
                         <label class="modal-product__label">
                             <span class="modal-product__label-text">Телефон</span>
-                            <input class="modal-product__input" type="text">
+                            <input class="modal-product__input entry-field" type="text" name="tel">
                         </label>
 
-                        <div class="modal-product__count">количество: <span>5</span></div>
+                        <div class="modal-product__count">количество: <span id="product-count">5</span></div>
 					</fieldset>
 
 					<button class="modal-product__form-btn btn" type="submit">Заказать</button>
