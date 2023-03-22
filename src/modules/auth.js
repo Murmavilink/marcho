@@ -77,6 +77,13 @@ export const auth = () => {
         }
     });
 
+    
+    modalAuthForm.addEventListener('input', (e) => {
+        e.target.value = e.target.value.replace(/\s+/g, '');
+
+        e.target.value = e.target.value.substring(0, 10);
+    });
+
 
     if(localStorage.getItem('auth')) {
         login(JSON.parse(localStorage.getItem('auth')));
