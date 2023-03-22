@@ -1,3 +1,3 @@
 import { sendForm } from "./modules/sendForm";
 
-sendForm();
+sendForm({idForm: 'contact-form'});

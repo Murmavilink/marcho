@@ -1,5 +1,5 @@
-export const sendForm = () => {
-    const form = document.querySelector('.contact__form');
+export const sendForm = ({idForm}) => {
+    const form = document.querySelector(idForm);
     const textarea = form.querySelector('textarea');
     const statusBlock = document.createElement('h3');
     const loadText = 'Загрузка...';
