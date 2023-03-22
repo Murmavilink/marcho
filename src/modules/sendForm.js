@@ -1,5 +1,10 @@
+import { validate } from "./validate";
+import { inputСheck } from "./validate";
+import { maskPhone } from "./validate";
+
 export const sendForm = ({idForm, idProductСount}) => {
     const form = document.getElementById(idForm);
+    const formElements = form.querySelectorAll('.entry-field');
     const statusBlock = document.createElement('h3');
     const loadText = 'Загрузка...';
     const errorText = 'Ошибка...';
@@ -25,7 +30,6 @@ export const sendForm = ({idForm, idProductСount}) => {
 
 
     const submitForm = () => {
-        const formElements = form.querySelectorAll('.entry-field');
         const formData = new FormData(form);
         const formBody = {};
 
@@ -55,15 +59,21 @@ export const sendForm = ({idForm, idProductСount}) => {
             throw new Error('Верните форму на место, пожааааалуйста))');
         }
 
-        form.append(statusBlock);
+        form.addEventListener('input', () => {
+            validate(formElements);
+            inputСheck();
+        });
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
     
-            submitForm();
+            if(validate(formElements)) submitForm();
         });
+
+        form.append(statusBlock);
     } catch(error) {
         console.log(error.message);
     }
    
+    maskPhone('.form-phone');
 };
