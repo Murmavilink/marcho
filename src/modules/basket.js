@@ -77,17 +77,14 @@ export const basket = (selector) => {
     };
 
 
-    try {
+    if(goodsWrap) {
         goodsWrap.addEventListener('click', (e) => {
             if(e.target.closest('.basket-link')) {
                 handlerProduct(e.target.closest('.product-item'));
             }
         });
-    } catch(error) {
-        console.log(error.message);
     }
     
-
 
     cart.addEventListener('click', (e) => {
         e.preventDefault();

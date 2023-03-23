@@ -3,6 +3,8 @@ import { getData } from "./getData";
 
 
 export const product = async () => {
+  try {
+
     const productPage = document.querySelector('.product-page');
     const productTitle = document.querySelector('.product-one__title');
     const thumbsWrapper = document.querySelector('.thumbs-wrapper');
@@ -14,41 +16,41 @@ export const product = async () => {
     const counterNum = document.querySelector('.product-one__item-num');
     const productId = document.getElementById('product-sku');
     const productCategory = document.getElementById('product-category');
-    
+
     const goods = await getData();
     const idProduct = sessionStorage.getItem('idProduct');
 
 
-    if(!idProduct) {
+    if (!idProduct) {
       productPage.style.cssText = 'text-align: center; font-size: 50px; color: #000; padding: 150px;';
       productPage.textContent = 'No Product';
-      
+
       return;
     }
 
 
     const getProduct = () => {
-        let product;
-    
-        goods.forEach(productItem => {
-            if(productItem.id == idProduct) product = productItem;
-        });
+      let product;
 
-        return product;
+      goods.forEach(productItem => {
+        if (productItem.id == idProduct) product = productItem;
+      });
+
+      return product;
     };
 
 
     const showProductInfo = (product) => {
-        productTitle.textContent = product.name;
-        productDiscount.textContent = product.discount;
+      productTitle.textContent = product.name;
+      productDiscount.textContent = product.discount;
 
-        newPrice.textContent = product.price + 'тг';
-        oldPrice.textContent = product.priceOld + 'тг';
-        
-        product.priceOld ? oldPrice.textContent = product.priceOld + 'тг': oldPrice.textContent = '';
+      newPrice.textContent = product.price + 'тг';
+      oldPrice.textContent = product.priceOld + 'тг';
 
-        productId.textContent = product.id;
-        productCategory.textContent = product.category;
+      product.priceOld ? oldPrice.textContent = product.priceOld + 'тг' : oldPrice.textContent = '';
+
+      productId.textContent = product.id;
+      productCategory.textContent = product.category;
     };
 
     const renderSlider = (product) => {
@@ -57,12 +59,12 @@ export const product = async () => {
 
       if (Array.isArray(product.images)) {
         product.images.forEach((image, index) => {
-          if(index < 4) {
+          if (index < 4) {
             thumbsWrapper.insertAdjacentHTML(`beforeend`, `
             <div class="swiper-slide">
               <img src="${image}"/>
             </div>`);
-  
+
             sliderWrapper.insertAdjacentHTML(`beforeend`, `
             <div class="swiper-slide">
               <img src="${image}"/>
@@ -76,7 +78,7 @@ export const product = async () => {
         </div>`);
       }
 
-    };  
+    };
 
 
     const sliderProduct = () => {
@@ -87,7 +89,7 @@ export const product = async () => {
         freeMode: true,
         watchSlidesProgress: true,
       });
-  
+
       const swiper2 = new Swiper(".mySwiper", {
         spaceBetween: 10,
         zoom: true,
@@ -104,11 +106,11 @@ export const product = async () => {
 
     const counter = () => {
       counterWrapper.addEventListener('click', (e) => {
-          
-        if(e.target.dataset.action === 'plus') {
+
+        if (e.target.dataset.action === 'plus') {
           counterNum.textContent++;
-        } else if(e.target.dataset.action === 'minus') {
-          if(+counterNum.textContent > 1) counterNum.textContent--;
+        } else if (e.target.dataset.action === 'minus') {
+          if (+counterNum.textContent > 1) counterNum.textContent--;
         }
 
       });
@@ -120,4 +122,7 @@ export const product = async () => {
     showProductInfo(getProduct());
     sliderProduct();
     counter();
+  } catch (error) {
+    console.log(error.message);
+  }
 };

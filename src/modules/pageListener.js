@@ -23,30 +23,31 @@ export const pageListener = () => {
 
   swup.on('contentReplaced', () => {
 
-    if(window.location.pathname === '/index.html') {
-        menu(true);  
-        slider();
-        lightbox();
-        render({display: 'main', stack: 6, selectorWrap: '.product__items'});
-        smoothScroll();
-        timer();
-        productClick('.product__items');
-        auth();
-        basket('.product__items');
-    } else if(window.location.pathname === '/shop.html') {
-        render({display: 'shop', stack: 10, selectorWrap: '.shop-content__inner'});
-        menu(true);
-        viewGoods();
-        pagination();
-        filter();
-        renderFilter();
-        productClick('.shop-content__inner');
-        auth();
-        basket('.shop-content__inner');
-    } else if(window.location.pathname === '/contacts.html') {
-      sendForm();
+    if (window.location.pathname === '/index.html') {
+      menu(true);
+      slider();
+      lightbox();
+      render({ display: 'main', stack: 6, selectorWrap: '.product__items' });
+      smoothScroll();
+      timer();
+      productClick('.product__items');
       auth();
-    } else if(window.location.pathname === '/product.html') {
+      basket('.product__items');
+    } else if (window.location.pathname === '/shop.html') {
+      render({ display: 'shop', stack: 10, selectorWrap: '.shop-content__inner' });
+      menu(true);
+      viewGoods();
+      pagination();
+      filter();
+      renderFilter();
+      productClick('.shop-content__inner');
+      auth();
+      basket('.shop-content__inner');
+    } else if (window.location.pathname === '/contacts.html') {
+      sendForm({ idForm: 'contact-form' });
+      auth();
+    } else if (window.location.pathname === '/product.html') {
+      sendForm({ idForm: 'product-form', idProductСount: 'product-count' });
       product();
       auth();
       modalProduct();

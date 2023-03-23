@@ -4,84 +4,88 @@ import { changeView } from './helpers';
 
 
 export const pagination = async () => {
-    const paginationBlock = document.querySelector('.pagination');
+    try {
+        const paginationBlock = document.querySelector('.pagination');
 
-    const goods = await getData();
-    const countPage = Math.ceil(goods.length / 10);
+        const goods = await getData();
+        const countPage = Math.ceil(goods.length / 10);
 
-    let currentPage = 1;
-    let stack = 10;
-
-    
-    const viewСheck = () => {
-        if(document.querySelector('.button-list').classList.contains('shop-content__filter-btn--active')) changeView();
-    };
+        let currentPage = 1;
+        let stack = 10;
 
 
-    const handlerClassItems = (index) => {
-        const paginatioItems = document.querySelectorAll('.pagination__link');
-
-        paginatioItems.forEach(item => item.classList.remove('pagination__link--active'));
-
-        paginatioItems[index - 1].classList.add('pagination__link--active');
-    };
+        const viewСheck = () => {
+            if (document.querySelector('.button-list').classList.contains('shop-content__filter-btn--active')) changeView();
+        };
 
 
-    const displayList = (data, stackPage, pageNum) => {
-        pageNum--;
+        const handlerClassItems = (index) => {
+            const paginatioItems = document.querySelectorAll('.pagination__link');
 
-        const start = stackPage * pageNum;
-        const end = start + stackPage;
-        const paginatedData = data.slice(start, end);
+            paginatioItems.forEach(item => item.classList.remove('pagination__link--active'));
 
-        render({ selectorWrap: '.shop-content__inner', paginatedData });
-        viewСheck();
-    };
+            paginatioItems[index - 1].classList.add('pagination__link--active');
+        };
 
 
-    const displayPaginationBtns = () => {
-        const paginationWrap = document.querySelector('.pagination__list');
+        const displayList = (data, stackPage, pageNum) => {
+            pageNum--;
 
-        for (let i = 1; i <= countPage; i++) {
-            paginationWrap.insertAdjacentHTML('beforeend', `
-                <li class="pagination__item">
-                    <a class="pagination__link" href="#">${i}</a>
-                </li>`);
+            const start = stackPage * pageNum;
+            const end = start + stackPage;
+            const paginatedData = data.slice(start, end);
 
-            if (i === 1) document.querySelector('.pagination__link').classList.add('pagination__link--active');
-        }
-    };
+            render({ selectorWrap: '.shop-content__inner', paginatedData });
+            viewСheck();
+        };
 
 
-    paginationBlock.addEventListener('click', (e) => {
-        e.preventDefault();
+        const displayPaginationBtns = () => {
+            const paginationWrap = document.querySelector('.pagination__list');
 
-        const element = e.target;
+            for (let i = 1; i <= countPage; i++) {
+                paginationWrap.insertAdjacentHTML('beforeend', `
+                    <li class="pagination__item">
+                        <a class="pagination__link" href="#">${i}</a>
+                    </li>`);
 
-
-        if (element.classList.contains('pagination__link')) {
-            displayList(goods, stack, element.textContent);
-
-            currentPage = element.textContent;
-
-            handlerClassItems(element.textContent);
-        }
-
-        if (element.classList.contains('pagination__next')) {
-            if (currentPage < countPage) {
-                displayList(goods, stack, ++currentPage);
-                handlerClassItems(currentPage);
+                if (i === 1) document.querySelector('.pagination__link').classList.add('pagination__link--active');
             }
-        }
+        };
 
-        if (element.classList.contains('pagination__prev')) {
-            if (currentPage > 1) {
-                displayList(goods, stack, --currentPage);
-                handlerClassItems(currentPage);
+
+        paginationBlock.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const element = e.target;
+
+
+            if (element.classList.contains('pagination__link')) {
+                displayList(goods, stack, element.textContent);
+
+                currentPage = element.textContent;
+
+                handlerClassItems(element.textContent);
             }
-        }
-    });
+
+            if (element.classList.contains('pagination__next')) {
+                if (currentPage < countPage) {
+                    displayList(goods, stack, ++currentPage);
+                    handlerClassItems(currentPage);
+                }
+            }
+
+            if (element.classList.contains('pagination__prev')) {
+                if (currentPage > 1) {
+                    displayList(goods, stack, --currentPage);
+                    handlerClassItems(currentPage);
+                }
+            }
+        });
 
 
-    displayPaginationBtns(goods);
+        displayPaginationBtns(goods);
+    } catch (error) {
+        console.log(error.message);
+    }
 };
