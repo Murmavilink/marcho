@@ -1836,7 +1836,7 @@ footer {
 
 
 .product-page {
-  padding: 120px 0 0
+  padding: 120px 0 120px;
 }
 
 .product-one__inner {
