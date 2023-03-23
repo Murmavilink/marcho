@@ -144,7 +144,7 @@
                         <p class="contact__form-title"></p>
                         <div class="contact__form-box">
                             <input class="contact__form-input entry-field form-name" type="text" name="name" placeholder="Ваше Имя *">
-                            <input class="contact__form-input entry-field form-email" type="text" name="email" placeholder="Ваш email адрес *">
+                            <input class="contact__form-input entry-field form-email" type="email" name="email" placeholder="Ваш email адрес *">
                         </div>
                         <input class="contact__form-input entry-field" type="text" name="subject" placeholder="Тема *">
                         <textarea class="contact__form-textarea entry-field" name="message" placeholder="Сообщение"></textarea>
@@ -265,9 +265,11 @@
                         possimus vero! Ratione, tempora cum, porro molestias voluptatum dolore temporibus sint
                         reiciendis perferendis magni natus culpa?
                     </p>
-                    <form class="footer-top__form" action="#">
-                        <input class="footer-top__form-input" type="email" placeholder="Ваш электронный адрес" required>
-                        <button class="footer-top__form-btn" type="submit">Подписаться</button>
+                    <form id="footer-form" class="footer-top__form" action="#">
+                        <div class="footer-top__form-wrap">
+                            <input class="footer-top__form-input entry-field form-email" type="email" placeholder="Ваш электронный адрес" name="email">
+                            <button class="footer-top__form-btn" type="submit">Подписаться</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -284,7 +286,6 @@
             </div>
         </div>
     </footer>
-
 
 
 </body>

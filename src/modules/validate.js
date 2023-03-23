@@ -30,23 +30,19 @@ export const validate = (formInputs) => {
 
 
 export const inputСheck = () => {
-
   const nameInput = document.querySelector('.form-name');
   const mailInput = document.querySelector('.form-email');
+  
 
-  try {
+  if (nameInput) {
     nameInput.addEventListener('input', (e) => {
       e.target.value = e.target.value.replace(/[^а-яё -]/gi, "");
     });
-
-
+  } else if (mailInput) {
     mailInput.addEventListener('input', (e) => {
       e.target.value = e.target.value.replace(/[^a-z@\-_.!~*']/gi, "");
     });
-  } catch (error) {
-    console.log(error.message);
   }
-
 
 };
 

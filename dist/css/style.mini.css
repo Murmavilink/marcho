@@ -622,8 +622,8 @@ footer {
   line-height: 1
 }
 
-.footer-top__form {
-  display: flex
+.footer-top__form-wrap {
+  display: flex;
 }
 
 .footer-top__link {
