@@ -38,7 +38,7 @@ export const render = async ({ display, stack, selectorWrap, sordetData, paginat
                             </div>
                         </div>
                         <div class="product-item__content-box">
-                            <button class="product-item__btn">Добавить в карзину</button>
+                            <a class="product-item__btn" href="product.html">Добавить в карзину</a>
                         </div>
                     </div>
                     </div>`);
