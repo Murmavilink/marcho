@@ -9,7 +9,8 @@ export const productClick = (selectorWrap) => {
     const goodsWrap = document.querySelector(selectorWrap);
 
     goodsWrap.addEventListener('click', (e) => {
-        if(e.target.closest('.product-link')) {
+     
+        if(e.target.closest('.product-link') || e.target.closest('.product-item__btn')) {
             const idProduct = e.target.closest('.product-item').querySelector('.product-item__id').textContent;
 
             sessionStorage.setItem('idProduct', idProduct);

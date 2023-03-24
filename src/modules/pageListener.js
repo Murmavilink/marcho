@@ -10,7 +10,7 @@ import { timer } from './timer';
 import { pagination } from './pagination';
 import { filter } from "./filter";
 import { renderFilter } from "./renderFilter";
-import { productClick } from './helpers';
+import { productClick } from './additionalFunctions';
 import { product } from './product';
 import { auth } from './auth';
 import { sendForm } from './sendForm';

@@ -1,6 +1,6 @@
 import { getData } from "./getData";
 import { render } from "./render";
-import { changeView } from './helpers';
+import { changeView } from './additionalFunctions';
 
 
 export const pagination = async () => {

@@ -1,4 +1,4 @@
-import { changeView } from './helpers';
+import { changeView } from './additionalFunctions';
 
 export const viewGoods = (statusSwitching) => {
     const buttonGrid = document.querySelector('.button-grid');

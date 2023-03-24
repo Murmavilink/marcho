@@ -3,7 +3,7 @@ import { lightbox } from "./modules/lightbox";
 import { render } from "./modules/render";
 import { smoothScroll } from "./modules/smoothScroll";
 import { timer } from "./modules/timer";
-import { productClick } from './modules/helpers';
+import { productClick } from './modules/additionalFunctions';
 import { basket } from "./modules/basket";
 
 slider();

@@ -3,12 +3,12 @@ import { viewGoods } from "./modules/viewGoods";
 import { pagination } from './modules/pagination';
 import { filter } from "./modules/filter";
 import { renderFilter } from "./modules/renderFilter";
-import { productClick } from './modules/helpers';
+import { productClick } from './modules/additionalFunctions';
 import { basket } from "./modules/basket";
 
 render({
-    display: 'shop', 
-    stack: 10, 
+    display: 'shop',
+    stack: 10,
     selectorWrap: '.shop-content__inner'
 });
 viewGoods();
