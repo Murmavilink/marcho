@@ -52,9 +52,18 @@ export const render = async ({ display, stack, selectorWrap, sordetData, paginat
     if (sordetData) renderGoods( sordetData.slice(0, stack) );
 
 
-    // получаем данные  
-    goods = await getData();
+    try {
+        // получаем данные  
+        goods = await getData();
 
-    if (display === 'main' || display === 'shop') renderGoods( goods.slice(0, stack) );
+            
+        if(!goods) {
+            throw new Error('Данные не получены');
+        }
+
+        if (display === 'main' || display === 'shop') renderGoods( goods.slice(0, stack) );
+    } catch(error) {
+        console.log(error);
+    }
 
 };
